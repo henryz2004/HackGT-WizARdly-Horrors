@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/aa228f07-7881-4fc0-9b3d-b09bb4cfd884>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 73ae5313-084d-4d30-9e16-c33839a018f7
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 73ae5313-084d-4d30-9e16-c33839a018f7
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8490407d-1517-448a-a7a1-300f0576f6b6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/440c0e90-3338-4c8d-ba9b-d46b982c92be>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8490407d-1517-448a-a7a1-300f0576f6b6>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    scoreText: false
+    xpbar: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      xpbar: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text scoreText
+    - // @input SceneObject xpbar
