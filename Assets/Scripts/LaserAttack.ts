@@ -14,25 +14,20 @@ export class LaserAttack extends BaseScriptComponent {
     @input
     targetObj: SceneObject;
 
+    cursorController = SIK.CursorController;
+
+
     onAwake() {
-        this.createEvent("OnStartEvent").bind(() => {
-            this.onStart();
-        }
-        )
-
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
-    }
-
-    onStart() {
-        let cursorController = SIK.CursorController;
-        let cursors = cursorController.getAllCursors();
-        let cursor = cursors[0];
-        
     }
 
     onUpdate(){
 
-        
+        let cursors = this.cursorController.getAllCursors()
+        if (cursors.length > 0) {
+            let cursorPos = cursors[0].cursorPosition;
+            this.targetObj.getTransform().setWorldPosition(cursorPos);
+        }
         
         const start = this.originObj.getTransform().getWorldPosition();
         const end = this.targetObj.getTransform().getWorldPosition();
