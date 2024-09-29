@@ -15,11 +15,11 @@ export class LaserAttack extends BaseScriptComponent {
 	targetObj: SceneObject;
 
 
-    @input
-    rightHandInteractor: HandInteractor;
+	@input
+	rightHandInteractor: HandInteractor;
 
-	// cursorController = SIK.CursorController;
-    handInputData = SIK.HandInputData;
+// cursorController = SIK.CursorController;
+	handInputData = SIK.HandInputData;
 
 	onAwake() {
 
