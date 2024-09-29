@@ -31,9 +31,7 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    forwardSpeed: true
-    turnSpeed: true
-    playerObj: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
