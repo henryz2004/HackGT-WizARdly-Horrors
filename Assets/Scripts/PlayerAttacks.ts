@@ -96,7 +96,7 @@ export class PlayerAttacks extends BaseScriptComponent {
         this.attack_timer -= getDeltaTime();
 
         this.projectile_list = this.projectile_list.filter((proj) => {
-                if (!proj.enabled) {
+                if (!proj.enabled || proj.getTransform().getWorldPosition().y < -250) {
                     proj.destroy()
                     return false
                 }

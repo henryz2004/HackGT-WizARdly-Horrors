@@ -7,7 +7,6 @@
     - !<own> 91c7387c-8133-4acc-a38f-bb78a5eb925e
     - !<own> 9aecc664-181d-4b24-9edb-d256b1a56a16
     - !<own> 9362f63d-27c5-4550-9f6d-bf9fb5976f19
-    - !<own> 0240e458-a4df-49bb-abf1-e5b43381dbcf
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -268,26 +267,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/0240e458-a4df-49bb-abf1-e5b43381dbcf>
-  PrefabRemaps:
-    - 0240e458-a4df-49bb-abf1-e5b43381dbcf: dfaf2618-3054-4cd1-ba4d-076696e901b6
-    - 4b0a3258-944c-4148-a97f-0fff486b96db: 1f68e5e5-c56b-49bd-a953-797b12a8263b
-    - b2fbfab0-435b-4395-b414-937c2041a5c9: 05355764-37f5-47be-8a88-040a1d31f818
-    - ed8a4a40-b822-4ce0-8d8a-e2ac0df90f49: 11316f5b-da66-4950-8c2d-3a5c5af19f2f
-  Name: Projectile
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> ed8a4a40-b822-4ce0-8d8a-e2ac0df90f49
-    - !<own> 4b0a3258-944c-4148-a97f-0fff486b96db
-    - !<own> b2fbfab0-435b-4395-b414-937c2041a5c9
 - !<ScriptComponent/03142dbd-a09e-4262-a111-19e44ac744e3>
   PrefabRemaps:
     []
@@ -2673,22 +2652,6 @@
     - !<own> 87befeb1-dd79-4ac3-ae4d-28bea5f68bc7
   Components:
     []
-- !<ScriptComponent/4b0a3258-944c-4148-a97f-0fff486b96db>
-  PrefabRemaps:
-    []
-  Name: ProjectileDamage
-  Enabled: true
-  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
 - !<ColliderComponent/4b3d0ba1-35b4-4848-bfb4-3c45feedea34>
   PrefabRemaps:
     []
@@ -4565,8 +4528,8 @@
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 0.000000
-      turnSpeed: !<float> 0.000000
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
   ScriptTypes:
     "":
@@ -5672,7 +5635,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 100.000000, y: 100.000000, z: 100.000000}
     hasSegmentScaleCompensation: false
@@ -6492,29 +6455,6 @@
     - !<own> 6ecaf8f5-94ff-45f7-836c-02d40ab9825b
   Components:
     []
-- !<BodyComponent/b2fbfab0-435b-4395-b414-937c2041a5c9>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> ddd48825-3c1d-4bdd-b2ac-f2bed06e1a79
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 70d522d8-d109-4c9f-b625-b5aa379929b7
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: true
-  BodySetting: Mass
-  BodySettingValue: 16.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
 - !<ScriptComponent/b3866999-93d5-438f-aeb4-da719fc367bd>
   PrefabRemaps:
     []
@@ -8519,26 +8459,6 @@
     - !<own> 5ec4fd6f-5b36-4c34-9962-9c302e97d838
   Components:
     []
-- !<RenderMeshVisual/ed8a4a40-b822-4ce0-8d8a-e2ac0df90f49>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
-  Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
 - !<RenderMeshVisual/ee37b1f3-32a4-484d-a4bb-43b2bc54befa>
   PrefabRemaps:
     []
@@ -8742,7 +8662,7 @@
     "":
       attack_cooldown: !<float> 1.000000
       projectile_obj: !<reference.ObjectPrefab> 7f417bb0-0c00-488c-a019-ec5e086d47ce
-      launch_velocity: !<float> 100.000000
+      launch_velocity: !<float> 500.000000
       projectile_container: !<reference.SceneObject> 9aecc664-181d-4b24-9edb-d256b1a56a16
   ScriptTypes:
     "":
