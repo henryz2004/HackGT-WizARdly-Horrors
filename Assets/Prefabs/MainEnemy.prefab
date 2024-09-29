@@ -1,10 +1,10 @@
-- !<ObjectPrefab/b0d3ed8e-a314-43b1-a723-b3a7017cb6fa>
+- !<ObjectPrefab/67bd20e9-0d1f-47f9-82db-100b6eb42e22>
   PackagePath: ""
   objects:
-    - !<own> bf4c18f1-6dcf-494d-9f7a-726fe20318c7
+    - !<own> f66b2ed0-6f84-4a9e-84a6-1a8329e74973
   LazyLoading: false
   RetainAssets: true
-- !<ScriptComponent/05ebaa53-4aab-4749-b6cc-8605b0033b8d>
+- !<ScriptComponent/5322dcd0-bb9d-4262-bc34-f28d85193a48>
   PrefabRemaps:
     []
   Name: Generative 3D Component
@@ -24,26 +24,7 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/7a14bb16-da32-4bd3-b215-d8b61f26f010>
-  PrefabRemaps:
-    []
-  Name: EnemyBehaviour
-  Enabled: true
-  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      forwardSpeed: !<float> 20.000000
-      turnSpeed: !<float> 1.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-  ScriptTypes:
-    "":
-      {}
-- !<BodyComponent/b345bb74-b45c-4d6e-9a3d-c8b904ecccad>
+- !<BodyComponent/57a0df06-9065-4832-a3f4-5cff8cdef92a>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -66,7 +47,26 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<SceneObject/bf4c18f1-6dcf-494d-9f7a-726fe20318c7>
+- !<ScriptComponent/9c95edc4-b6ba-49c2-8743-cf015fdc6538>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/f66b2ed0-6f84-4a9e-84a6-1a8329e74973>
   PrefabRemaps:
     []
   Name: MainEnemy
@@ -75,11 +75,11 @@
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: -200.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     []
   Components:
-    - !<own> 05ebaa53-4aab-4749-b6cc-8605b0033b8d
-    - !<own> 7a14bb16-da32-4bd3-b215-d8b61f26f010
-    - !<own> b345bb74-b45c-4d6e-9a3d-c8b904ecccad
+    - !<own> 5322dcd0-bb9d-4262-bc34-f28d85193a48
+    - !<own> 9c95edc4-b6ba-49c2-8743-cf015fdc6538
+    - !<own> 57a0df06-9065-4832-a3f4-5cff8cdef92a
