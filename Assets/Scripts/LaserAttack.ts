@@ -14,27 +14,25 @@ export class LaserAttack extends BaseScriptComponent {
 	@input
 	targetObj: SceneObject;
 
-    // @input
-    // rightHandTracker: HandTracking3DAsset;
 
     @input
     rightHandInteractor: HandInteractor;
 
 	// cursorController = SIK.CursorController;
+    handInputData = SIK.HandInputData;
 
 	onAwake() {
 
-        this.rightHandInteractor.startPoint
         this.gestureModule
             .getTargetingDataEvent(GestureModule.HandType.Right)
             .add((targetArgs: TargetingDataArgs) => {
 
-                let origin = this.rightHandInteractor.startPoint;//targetArgs.rayOriginInWorld;
-                let target = this.rightHandInteractor.endPoint;
-                let direction = target.sub(origin).normalize();// targetArgs.rayDirectionInWorld.normalize();
+                // let origin = this.rightHandInteractor.startPoint;//targetArgs.rayOriginInWorld;
+                // let target = this.rightHandInteractor.endPoint;
+                // let direction = target.sub(origin).normalize();// targetArgs.rayDirectionInWorld.normalize();
 
-                this.originObj.getTransform().setWorldPosition(origin);
-                this.targetObj.getTransform().setWorldPosition(origin.add(direction.uniformScale(100)));
+                // this.originObj.getTransform().setWorldPosition(origin);
+                // this.targetObj.getTransform().setWorldPosition(origin.add(direction.uniformScale(100)));
 
             }
         )
@@ -43,20 +41,38 @@ export class LaserAttack extends BaseScriptComponent {
 
 	onUpdate() {
 
-		const start = this.originObj.getTransform().getWorldPosition();
-		const end = this.targetObj.getTransform().getWorldPosition();
+        let rightHand = this.handInputData.getHand("right");
+        let origin = rightHand.getPalmCenter();
+        let target = rightHand.indexTip.position;
 
-		const direction = end.sub(start).normalize();
-		const distance = end.distance(start);
+        if (origin == null || target == null) {
+            return;
+        }
 
-		this.cylinderRef
+        // let origin = this.rightHandInteractor.startPoint; //targetArgs.rayOriginInWorld;
+		// let target = this.rightHandInteractor.endPoint;
+		let direction = target.sub(origin).normalize(); // targetArgs.rayDirectionInWorld.normalize();
+
+		this.originObj.getTransform().setWorldPosition(origin);
+		this.targetObj
 			.getTransform()
-			.setWorldPosition(start.add(direction.uniformScale(distance / 2)));
-		this.cylinderRef
-			.getTransform()
-			.setWorldScale(new vec3(0.1, 0.1, distance));
-		this.cylinderRef
-			.getTransform()
-			.setWorldRotation(quat.lookAt(direction, vec3.up()));
+			.setWorldPosition(origin.add(direction.uniformScale(100)));
+
+
+		// const start = this.originObj.getTransform().getWorldPosition();
+		// const end = this.targetObj.getTransform().getWorldPosition();
+
+		// const direction = end.sub(start).normalize();
+		// const distance = end.distance(start);
+
+		// this.cylinderRef
+		// 	.getTransform()
+		// 	.setWorldPosition(start.add(direction.uniformScale(distance / 2)));
+		// this.cylinderRef
+		// 	.getTransform()
+		// 	.setWorldScale(new vec3(0.1, 0.1, distance));
+		// this.cylinderRef
+		// 	.getTransform()
+		// 	.setWorldRotation(quat.lookAt(direction, vec3.up()));
 	}
 }
