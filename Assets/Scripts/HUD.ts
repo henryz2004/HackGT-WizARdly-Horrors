@@ -1,5 +1,4 @@
-import { ScoreManager } from "./ScoreManager";
-import { HealthManager } from "./HealthManager";
+import { Player } from "./PlayerSingleton";
 
 @component
 export class HUD extends BaseScriptComponent {
@@ -8,9 +7,7 @@ export class HUD extends BaseScriptComponent {
 	@input healthText: Text;
 	@input healthbar: SceneObject;
 
-	private scoreManager = ScoreManager.getInstance();
-	private healthManager = HealthManager.getInstance();
-
+	private player = Player.getInstance();
 	onAwake() {
 		this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
 	}
@@ -18,10 +15,10 @@ export class HUD extends BaseScriptComponent {
 	onUpdate() {
 		let width = 18;
 		let maxScore = 10;
-		let currentScore = this.scoreManager.getScore() % maxScore;
+		let currentScore = this.player.getScore() % maxScore;
 
 		let maxHealth = 10;
-		let currentHealth = this.healthManager.getHealth();
+		let currentHealth = this.player.getHealth();
 
 		this.scoreText.text = "XP: " + currentScore;
 		this.xpbar

@@ -31,16 +31,4 @@ export class Player extends BaseScriptComponent {
         this.health = health;
     }
 
-    getActivePowerup() {
-        if (this.activePowerup == null) {
-            this.activePowerup = "RightHandXP";
-        }
-        return this.activePowerup;
-    }
-
-    setActivePowerup(powerup: string) {
-        this.activePowerup = powerup;
-    }
-
-
 }
