@@ -11,7 +11,7 @@ export class PlayerAttacks extends BaseScriptComponent {
     initial_cooldown: number = 1.0;
     
     @input
-    level_up_cooldown = 0.2
+    level_up_cooldown: number = 0.2;
 
     @input
     projectile_obj: ObjectPrefab;
@@ -105,7 +105,7 @@ export class PlayerAttacks extends BaseScriptComponent {
 
     onUpdate(){
         let level = Math.floor(this.player.getScore() / 10);
-        this.attack_cooldown = this.initial_cooldown - (level * this.level_up_cooldown)
+        this.attack_cooldown = this.initial_cooldown * (1 - this.level_up_cooldown) ** level;
 
         this.attack_timer -= getDeltaTime();
 
