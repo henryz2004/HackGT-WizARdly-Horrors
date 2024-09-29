@@ -2037,7 +2037,7 @@
   PrefabRemaps:
     []
   Name: Target
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 76.421349, y: 56.830467, z: -188.710709}
@@ -5185,7 +5185,7 @@
   PrefabRemaps:
     []
   Name: laser
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5432,7 +5432,7 @@
     - b54703db-7dae-4350-b756-c47188e4e1cb: 477a4b16-2631-43a1-95ae-60de4b2515cc
     - ee955f8c-3a45-49d1-8e5a-861505dd0f6e: b1aa9561-236b-474b-b8d0-f195c8a469fc
   Name: EnemyGhost
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -7096,7 +7096,7 @@
     - 9e5ffa78-05ce-4839-902f-26533950aca4: dfaf2618-3054-4cd1-ba4d-076696e901b6
     - abb15f79-72cd-4b4c-8a43-e65966670203: 1f68e5e5-c56b-49bd-a953-797b12a8263b
   Name: Projectile
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 44.066452, y: 0.000000, z: 0.000000}
@@ -9282,7 +9282,7 @@
   PrefabRemaps:
     []
   Name: Origin
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: -105.108528, y: 0.000000, z: 0.000000}
