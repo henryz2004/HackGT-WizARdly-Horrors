@@ -8742,7 +8742,7 @@
     "":
       attack_cooldown: !<float> 1.000000
       projectile_obj: !<reference.ObjectPrefab> 7f417bb0-0c00-488c-a019-ec5e086d47ce
-      launch_velocity: !<float> 1.000000
+      launch_velocity: !<float> 100.000000
       projectile_container: !<reference.SceneObject> 9aecc664-181d-4b24-9edb-d256b1a56a16
   ScriptTypes:
     "":
