@@ -10,6 +10,8 @@ export class EnemyBehaviour extends BaseScriptComponent {
     @input
     playerObj: SceneObject
 
+    
+
     enemy = this.getSceneObject()
 
     
