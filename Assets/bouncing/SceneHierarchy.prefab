@@ -1,0 +1,138 @@
+- !<ObjectPrefab/0e58d747-fe4d-4738-9e6d-71d2803c6ac3>
+  PackagePath: ""
+  objects:
+    - !<own> 571f583c-a4d2-4451-9622-56160b1304f7
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/0cb4c5c5-07cf-4a75-b3e7-bdc34df0c48a>
+  PrefabRemaps:
+    []
+  Name: Visualize Ghost
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 84873857-fde0-4a82-a22d-4e54aa0abc7b
+    - !<own> f08f05ce-88c9-420a-8f43-7efbbc7783c7
+- !<BodyComponent/0f316b47-c34d-43a4-8c94-3323159f365f>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<AudioComponent/20fe7b39-254c-4dbd-a3af-014c7f71b2f7>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> f0ecf6c9-9e13-4881-9a3b-3fb3695476c6
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
+- !<SceneObject/571f583c-a4d2-4451-9622-56160b1304f7>
+  PrefabRemaps:
+    []
+  Name: EnemyGhost Physics
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 0cb4c5c5-07cf-4a75-b3e7-bdc34df0c48a
+  Components:
+    - !<own> 9fa6cfcc-5cdc-41e0-949c-08e6c7774af8
+    - !<own> 0f316b47-c34d-43a4-8c94-3323159f365f
+    - !<own> 20fe7b39-254c-4dbd-a3af-014c7f71b2f7
+- !<ScriptComponent/84873857-fde0-4a82-a22d-4e54aa0abc7b>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  ScriptAsset: !<reference> ca64b9df-a539-456e-aca5-f7987e4d2fee
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/9fa6cfcc-5cdc-41e0-949c-08e6c7774af8>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> cdfb53ea-485b-4f84-95cb-5601110399b3
+  ScriptInputsDefault:
+    maxHealth: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      maxHealth: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/f08f05ce-88c9-420a-8f43-7efbbc7783c7>
+  PrefabRemaps:
+    []
+  Name: BouncingAnim
+  Enabled: true
+  ScriptAsset: !<reference> f73388ed-04a8-47a7-a179-75f851e8d287
+  ScriptInputsDefault:
+    forwardSpeed: true
+    turnSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 0.000000
+      turnSpeed: !<float> 0.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> 1698dbba-b9ba-48b7-abbf-d4fa351c46ca
+  ScriptTypes:
+    "":
+      {}

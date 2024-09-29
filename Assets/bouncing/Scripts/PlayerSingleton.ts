@@ -20,10 +20,6 @@ export class Player extends BaseScriptComponent {
         this.score = score;
     }
 
-    addScore(score: number) {
-        this.score += score;
-    }
-
     getHealth() {
         if (isNaN(this.health)) {
             this.health = 10;
@@ -33,10 +29,6 @@ export class Player extends BaseScriptComponent {
 
     setHealth(health: number) {
         this.health = health;
-    }
-
-    takeDamage(damage: number) {
-        this.health -= damage;
     }
 
 }

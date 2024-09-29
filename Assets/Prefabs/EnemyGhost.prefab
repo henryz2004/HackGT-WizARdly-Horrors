@@ -21,6 +21,26 @@
   MaxDistance: 100.000000
   EnableDirectivityEffect: true
   EnablePositionEffect: true
+- !<ScriptComponent/4a07d6c8-2235-4f61-a7a8-5761ff0c83d1>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
 - !<AudioComponent/59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db>
   PrefabRemaps:
     []
@@ -50,7 +70,7 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> b2e383d5-5b23-4aa8-89ec-8b10fb3a493f
   Components:
     - !<own> c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d
     - !<own> db6c52f0-ecdb-401d-95f2-3a56c67d9019
@@ -122,6 +142,42 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
+- !<ScriptComponent/b1aa9561-236b-474b-b8d0-f195c8a469fc>
+  PrefabRemaps:
+    []
+  Name: BouncingAnimMerge
+  Enabled: true
+  ScriptAsset: !<reference> 7be725c1-4bb2-443f-b753-38977023c92e
+  ScriptInputsDefault:
+    forwardSpeed: true
+    turnSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 0.000000
+      turnSpeed: !<float> 0.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> a16ab172-0885-408c-a59d-a7e3d4436759
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b2e383d5-5b23-4aa8-89ec-8b10fb3a493f>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -3.275000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4a07d6c8-2235-4f61-a7a8-5761ff0c83d1
+    - !<own> b1aa9561-236b-474b-b8d0-f195c8a469fc
 - !<BodyComponent/b388d806-96cd-416b-839d-71e0f4d582ba>
   PrefabRemaps:
     []
@@ -149,7 +205,7 @@
   PrefabRemaps:
     []
   Name: Generative 3D Component
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
   ScriptInputsDefault:
     renderOrder: true
@@ -215,7 +271,6 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
       damageRange: !<float> 6.000000
       damage: !<float> 1.000000
       maxHealth: !<float> 10.000000

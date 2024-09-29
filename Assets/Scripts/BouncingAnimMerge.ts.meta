@@ -1,18 +1,18 @@
-- !<AssetImportMetadata/8743fe0a-6391-4ebd-9331-b8400e93e1b0>
+- !<AssetImportMetadata/5c147fb3-cb8e-426c-9e6e-03a7401dc1a6>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+    TypeScriptAsset: !<reference> 7be725c1-4bb2-443f-b753-38977023c92e
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  PrimaryAsset: !<reference> 7be725c1-4bb2-443f-b753-38977023c92e
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    TypeScriptAsset: !<own> c8a94cf2-fc3b-474a-b31e-cad7b986c63b
+    TypeScriptAsset: !<own> b968b11d-885a-4927-b194-7c3bf08ee50b
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/e6ad9a1e-13dd-41a7-935c-83cd5ef4c0cd>
+  ImporterSettings: !<AssetImporterSettings/0d674858-e56d-46a1-85ea-c10e9c537f58>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/c8a94cf2-fc3b-474a-b31e-cad7b986c63b>
+- !<TypeScriptAssetData/b968b11d-885a-4927-b194-7c3bf08ee50b>
   SvgIcon: ""
   Description: ""
   InternalVersion: 0
@@ -24,10 +24,8 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    damage: false
-    damageRange: false
+    animation: false
     forwardSpeed: false
-    maxHealth: false
     playerObj: false
     turnSpeed: false
   ScriptTypesHidden:
@@ -36,9 +34,7 @@
     - forwardSpeed: !<float> 0.000000
       turnSpeed: !<float> 0.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      maxHealth: !<float> 0.000000
-      damageRange: !<float> 0.000000
-      damage: !<float> 0.000000
+      animation: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -46,6 +42,4 @@
     - // @input float forwardSpeed
     - // @input float turnSpeed
     - // @input SceneObject playerObj
-    - // @input float damageRange
-    - // @input float damage
-    - // @input float maxHealth
+    - // @input Asset.AnimationCurveTrack animation

@@ -1,0 +1,138 @@
+- !<ObjectPrefab/b6ff9de4-a763-4b23-8efd-86d24940f837>
+  PackagePath: ""
+  objects:
+    - !<own> 76daaac4-4d11-4f6e-82df-7caf2999184a
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/1ba375b3-7f59-44b5-91e6-8739cbe975a1>
+  PrefabRemaps:
+    []
+  Name: BouncingAnim
+  Enabled: true
+  ScriptAsset: !<reference> 458f6b93-03d2-4650-b88b-f9a70e47d25b
+  ScriptInputsDefault:
+    forwardSpeed: true
+    turnSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 0.000000
+      turnSpeed: !<float> 0.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> c2604493-0c33-4d4f-bd78-a77ee4f77130
+  ScriptTypes:
+    "":
+      {}
+- !<BodyComponent/6f8377df-b463-4dda-93f5-bdfb6cc0c111>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<SceneObject/76daaac4-4d11-4f6e-82df-7caf2999184a>
+  PrefabRemaps:
+    []
+  Name: EnemyGhost Physics
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d6e24da9-e8fa-45f0-ad2f-70cf3d95eee2
+  Components:
+    - !<own> cd402fed-12b4-47f2-8543-e4e7488dc651
+    - !<own> 6f8377df-b463-4dda-93f5-bdfb6cc0c111
+    - !<own> fede4ddb-a174-428f-afd5-dc5d698a7820
+- !<ScriptComponent/9686a26b-78bd-4de3-9cbf-fcc740cb32d3>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  ScriptAsset: !<reference> 113a6ad6-0c21-4d36-9a23-85e5eba39d20
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/cd402fed-12b4-47f2-8543-e4e7488dc651>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> be6dd20e-3762-4eb9-8221-d47c9c8bcc10
+  ScriptInputsDefault:
+    maxHealth: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      maxHealth: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/d6e24da9-e8fa-45f0-ad2f-70cf3d95eee2>
+  PrefabRemaps:
+    []
+  Name: Visualize Ghost
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 9686a26b-78bd-4de3-9cbf-fcc740cb32d3
+    - !<own> 1ba375b3-7f59-44b5-91e6-8739cbe975a1
+- !<AudioComponent/fede4ddb-a174-428f-afd5-dc5d698a7820>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> f1e5372e-aeef-4661-aa0f-ba22f91ea9ad
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false

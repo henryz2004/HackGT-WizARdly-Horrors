@@ -1,0 +1,14 @@
+- !<AssetImportMetadata/63234626-5447-4994-9567-5328e1a1545e>
+  ImportedAssetIds:
+    AnimationCurveTrack: !<reference> a16ab172-0885-408c-a59d-a7e3d4436759
+  ImporterName: AnimationCurveTrackImporter
+  PrimaryAsset: !<reference> a16ab172-0885-408c-a59d-a7e3d4436759
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/2230152b-5f16-45b1-bcd9-9513cf357802>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

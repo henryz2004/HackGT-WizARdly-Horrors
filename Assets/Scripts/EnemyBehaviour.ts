@@ -11,8 +11,6 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	@input
 	playerObj: SceneObject;
 
-	@input
-	animation: AnimationCurveTrack;
 
     @input
     damageRange: number;
@@ -153,16 +151,5 @@ export class EnemyBehaviour extends BaseScriptComponent {
 					this.turnSpeed * getDeltaTime()
 				)
 			);
-
-		let bobbing = this.enemy
-			.getTransform()
-			.getWorldPosition()
-			.add(
-				this.animation
-					.evaluateVec3(this.frame / 30)
-					.mult(new vec3(0, 6, 0))
-			);
-
-		this.enemy.getTransform().setWorldPosition(bobbing);
 	}
 }
