@@ -77,7 +77,7 @@
   ScriptInputs:
     "":
       forwardSpeed: !<float> 5.000000
-      strafeSpeed: !<float> 30.000000
+      strafeSpeed: !<float> 70.000000
       maxHealth: !<float> 4.000000
       damageRange: !<float> 10.000000
       damage: !<float> 1.000000
