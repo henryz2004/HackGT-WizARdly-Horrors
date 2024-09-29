@@ -4145,7 +4145,7 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
-  Dynamic: true
+  Dynamic: false
   BodySetting: Density
   BodySettingValue: 1.000000
   Damping: 0.000000
@@ -4522,8 +4522,7 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    forwardSpeed: true
-    turnSpeed: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
