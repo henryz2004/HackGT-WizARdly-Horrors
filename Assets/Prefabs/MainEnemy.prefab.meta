@@ -12,14 +12,14 @@
   ImporterSettings: !<AssetImporterSettings/cdfed3cc-97ca-4be9-8393-70c4eaa92a34>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/53c1d765-b449-426f-8700-a63e26918776>
+- !<ScriptComponent/0db2d623-131a-474c-a339-604ec214e8d9>
   PrefabRemaps:
     []
   Name: EnemyBehaviour
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    animation: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -27,64 +27,17 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
+      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
   ScriptTypes:
     "":
       {}
-- !<BodyComponent/9add75f7-22a5-41ec-80a4-fc571e1daff7>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: true
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
-- !<SceneObject/9f7ddf68-0599-4875-a5a0-0510c79b0473>
-  PrefabRemaps:
-    []
-  Name: MainEnemy
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> fb10fd2d-a7ca-45ad-9161-0e9a166562dd
-    - !<own> 53c1d765-b449-426f-8700-a63e26918776
-    - !<own> 9add75f7-22a5-41ec-80a4-fc571e1daff7
-- !<ObjectPrefab/a81789bc-c686-4067-ad83-dffb03249439>
+- !<ObjectPrefab/15336182-dca1-4e44-a61d-6f8f210f3257>
   PackagePath: ""
   objects:
-    - !<own> 9f7ddf68-0599-4875-a5a0-0510c79b0473
+    - !<own> c671a54b-517f-49c2-9ee5-5abb81de3d95
   LazyLoading: false
   RetainAssets: true
-- !<ObjectPrefabAssetData/f1815c4b-c8ac-4ac6-9746-9c628b34e0dc>
-  SourceRemaps:
-    - 05ebaa53-4aab-4749-b6cc-8605b0033b8d: fb10fd2d-a7ca-45ad-9161-0e9a166562dd
-    - 7a14bb16-da32-4bd3-b215-d8b61f26f010: 53c1d765-b449-426f-8700-a63e26918776
-    - b345bb74-b45c-4d6e-9a3d-c8b904ecccad: 9add75f7-22a5-41ec-80a4-fc571e1daff7
-    - bf4c18f1-6dcf-494d-9f7a-726fe20318c7: 9f7ddf68-0599-4875-a5a0-0510c79b0473
-  SourceState: !<own> a81789bc-c686-4067-ad83-dffb03249439
-- !<ScriptComponent/fb10fd2d-a7ca-45ad-9161-0e9a166562dd>
+- !<ScriptComponent/4ee6a93b-9cda-4fb0-8eb0-bfe8f6f7c72d>
   PrefabRemaps:
     []
   Name: Generative 3D Component
@@ -104,3 +57,50 @@
   ScriptTypes:
     "":
       {}
+- !<BodyComponent/519156b5-c97f-4f3f-9142-38f02ee417c3>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<SceneObject/c671a54b-517f-49c2-9ee5-5abb81de3d95>
+  PrefabRemaps:
+    []
+  Name: MainEnemy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 4ee6a93b-9cda-4fb0-8eb0-bfe8f6f7c72d
+    - !<own> 0db2d623-131a-474c-a339-604ec214e8d9
+    - !<own> 519156b5-c97f-4f3f-9142-38f02ee417c3
+- !<ObjectPrefabAssetData/f1815c4b-c8ac-4ac6-9746-9c628b34e0dc>
+  SourceRemaps:
+    - 05ebaa53-4aab-4749-b6cc-8605b0033b8d: 4ee6a93b-9cda-4fb0-8eb0-bfe8f6f7c72d
+    - 7a14bb16-da32-4bd3-b215-d8b61f26f010: 0db2d623-131a-474c-a339-604ec214e8d9
+    - b345bb74-b45c-4d6e-9a3d-c8b904ecccad: 519156b5-c97f-4f3f-9142-38f02ee417c3
+    - bf4c18f1-6dcf-494d-9f7a-726fe20318c7: c671a54b-517f-49c2-9ee5-5abb81de3d95
+  SourceState: !<own> 15336182-dca1-4e44-a61d-6f8f210f3257

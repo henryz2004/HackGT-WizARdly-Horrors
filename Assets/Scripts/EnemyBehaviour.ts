@@ -49,7 +49,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
             this.frame = 0;
             this.jumpscare = false;
         }
-        this.enemy.getTransform().setWorldScale(this.enemy.getTransform().getWorldScale().mult(new vec3(2,2,2)))
+        this.enemy.getTransform().setWorldScale(this.enemy.getTransform().getWorldScale().mult(new vec3(2,2,2))) 
     }
 
     private spawn(): void{
@@ -89,8 +89,8 @@ export class EnemyBehaviour extends BaseScriptComponent {
 
         this.enemy.getTransform().setWorldRotation(quat.slerp(this.enemy.getTransform().getWorldRotation(), newRot, this.turnSpeed * getDeltaTime()))
 
-        let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animation.evaluateVec3(this.frame/30).mult(new vec3(0,6,0)));
+        // let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animation.evaluateVec3(this.frame/30).mult(new vec3(0,6,0)));
         
-        this.enemy.getTransform().setWorldPosition(bobbing);
+        // this.enemy.getTransform().setWorldPosition(bobbing);
     }
 }

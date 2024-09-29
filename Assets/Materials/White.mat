@@ -1,8 +1,8 @@
-- !<Material/9692762a-8e81-4f0f-ad1d-022ce2fb08a2>
+- !<Material/37c368a9-9be9-4a71-b5cc-ad9d96412eef>
   PackagePath: ""
   PassesInfo:
-    - !<own> 4f754c2c-672d-417a-847f-0c1bf1c34bc7
-- !<PassInfo/4f754c2c-672d-417a-847f-0c1bf1c34bc7>
+    - !<own> 513751fd-5c7a-4e43-af5b-a7766e4d17a0
+- !<PassInfo/513751fd-5c7a-4e43-af5b-a7766e4d17a0>
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -23,4 +23,4 @@
     PreviewEnabled:
       typeIdx: 0
       value: 0
-  Pass: !<reference> 22a97730-35e4-4ba2-b314-5fe8cf433fcd
+  Pass: !<reference> 4eab24dc-32a3-4607-acdc-ddabd20a3428
