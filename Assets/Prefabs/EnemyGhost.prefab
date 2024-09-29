@@ -263,7 +263,8 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    {}
+    damageRange: true
+    damage: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -271,8 +272,8 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      damageRange: !<float> 6.000000
-      damage: !<float> 1.000000
+      damageRange: !<float> 0.000000
+      damage: !<float> 0.000000
       maxHealth: !<float> 10.000000
   ScriptTypes:
     "":

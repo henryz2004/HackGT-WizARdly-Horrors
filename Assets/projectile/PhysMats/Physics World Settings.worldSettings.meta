@@ -1,0 +1,14 @@
+- !<AssetImportMetadata/344a4906-93d1-414a-9a15-a1ea87177bdf>
+  ImportedAssetIds:
+    WorldSettingsAsset: !<reference> afdfb4f2-ee5a-4a8f-a2e4-21748be9360d
+  ImporterName: WorldSettingsAssetImporter
+  PrimaryAsset: !<reference> afdfb4f2-ee5a-4a8f-a2e4-21748be9360d
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/415b52bc-6ccf-4bca-860e-b26e74e6dae2>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000

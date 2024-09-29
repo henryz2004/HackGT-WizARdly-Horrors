@@ -12,20 +12,53 @@
   ImporterSettings: !<AssetImporterSettings/308140fe-2a4b-4725-afec-8d3acaa9372b>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/0a69029f-c7fa-4ffe-9182-7d71e822baef>
+- !<ObjectPrefab/3a7858db-6062-4bd5-9419-e5a66eeda412>
   PackagePath: ""
   objects:
-    - !<own> fcce0636-b0cf-4742-86e4-48ec230e908f
+    - !<own> 3d5714f4-7a91-43af-96db-1d52a2b9ec17
   LazyLoading: false
   RetainAssets: true
+- !<SceneObject/3d5714f4-7a91-43af-96db-1d52a2b9ec17>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 72baa695-580e-4385-9c34-d439084833ff
+    - !<own> 5e61145b-2ff8-4f66-b446-2752e4d33d72
+    - !<own> 69daa1e2-5035-425a-9a82-e5ee8b9af27d
 - !<ObjectPrefabAssetData/43951129-edeb-40af-ba2a-1bf6aef9a818>
   SourceRemaps:
-    - 05355764-37f5-47be-8a88-040a1d31f818: 4605f474-dc5e-4447-b8d8-084775da104c
-    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: d45d528c-f58b-4cbb-a32e-17bddc959f7f
-    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 85444774-b9d5-4ca5-afe7-631be3a698c7
-    - dfaf2618-3054-4cd1-ba4d-076696e901b6: fcce0636-b0cf-4742-86e4-48ec230e908f
-  SourceState: !<own> 0a69029f-c7fa-4ffe-9182-7d71e822baef
-- !<BodyComponent/4605f474-dc5e-4447-b8d8-084775da104c>
+    - 05355764-37f5-47be-8a88-040a1d31f818: 69daa1e2-5035-425a-9a82-e5ee8b9af27d
+    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: 72baa695-580e-4385-9c34-d439084833ff
+    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 5e61145b-2ff8-4f66-b446-2752e4d33d72
+    - dfaf2618-3054-4cd1-ba4d-076696e901b6: 3d5714f4-7a91-43af-96db-1d52a2b9ec17
+  SourceState: !<own> 3a7858db-6062-4bd5-9419-e5a66eeda412
+- !<ScriptComponent/5e61145b-2ff8-4f66-b446-2752e4d33d72>
+  PrefabRemaps:
+    []
+  Name: ProjectileDamage
+  Enabled: true
+  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      projDamage: !<float> 5.000000
+  ScriptTypes:
+    "":
+      {}
+- !<BodyComponent/69daa1e2-5035-425a-9a82-e5ee8b9af27d>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -48,23 +81,7 @@
   BodySettingValue: 16.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/85444774-b9d5-4ca5-afe7-631be3a698c7>
-  PrefabRemaps:
-    []
-  Name: ProjectileDamage
-  Enabled: true
-  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      projDamage: !<float> 5.000000
-  ScriptTypes:
-    "":
-      {}
-- !<RenderMeshVisual/d45d528c-f58b-4cbb-a32e-17bddc959f7f>
+- !<RenderMeshVisual/72baa695-580e-4385-9c34-d439084833ff>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -77,27 +94,11 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
+    - !<reference> e56a7b0e-b668-48dc-8902-3d1837c78da0
+    - !<reference> 06da53d9-2397-4567-9955-eee41444a945
   Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/fcce0636-b0cf-4742-86e4-48ec230e908f>
-  PrefabRemaps:
-    []
-  Name: Projectile
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> d45d528c-f58b-4cbb-a32e-17bddc959f7f
-    - !<own> 85444774-b9d5-4ca5-afe7-631be3a698c7
-    - !<own> 4605f474-dc5e-4447-b8d8-084775da104c

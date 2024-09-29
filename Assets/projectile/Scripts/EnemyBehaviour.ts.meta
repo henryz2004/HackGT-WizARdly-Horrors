@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/3d03a1ee-ee92-4b0b-a8f6-2cf84bc880f1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> e4b8df8d-6d9d-4329-b4ed-cb9c01fc4fe6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> e4b8df8d-6d9d-4329-b4ed-cb9c01fc4fe6
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> c6c428e2-1b84-462b-954e-77136cd94cd5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/54e2cbf6-8543-4704-95cf-66095498ec08>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c6c428e2-1b84-462b-954e-77136cd94cd5>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    forwardSpeed: false
+    maxHealth: false
+    playerObj: false
+    turnSpeed: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - forwardSpeed: !<float> 0.000000
+      turnSpeed: !<float> 0.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      maxHealth: !<float> 0.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float forwardSpeed
+    - // @input float turnSpeed
+    - // @input SceneObject playerObj
+    - // @input float maxHealth
