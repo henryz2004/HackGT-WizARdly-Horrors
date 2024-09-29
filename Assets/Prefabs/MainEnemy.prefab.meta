@@ -19,7 +19,7 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    {}
+    animation: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -27,6 +27,7 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
