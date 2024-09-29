@@ -24,6 +24,7 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    camera: false
     enemyPrefab: false
     spawnDelayRange: false
     spawnHeight: false
@@ -35,6 +36,7 @@
       spawnDelayRange: !<Vec2> {x: 0.000000, y: 0.000000}
       spawnRadius: !<float> 50.000000
       spawnHeight: !<float> 0.000000
+      camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -43,3 +45,4 @@
     - // @input vec2 spawnDelayRange
     - // @input float spawnRadius = 50
     - // @input float spawnHeight = 0
+    - // @input Component.Camera camera

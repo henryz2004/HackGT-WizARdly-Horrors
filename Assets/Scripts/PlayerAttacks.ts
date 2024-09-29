@@ -43,6 +43,7 @@ export class PlayerAttacks extends BaseScriptComponent {
         this.projectile_list.push(curr_proj)
         print("PROJECTILE LIST LENGTH: " + this.projectile_list.length)
         curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
+        
         //curr_proj.getTransform().setWorldPosition(new vec3(0,0,-300))
 
         let rb = curr_proj.getComponent('Physics.BodyComponent');

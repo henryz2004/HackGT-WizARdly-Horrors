@@ -5,6 +5,7 @@ export class Spawner extends BaseScriptComponent {
     @input spawnDelayRange: vec2 = new vec2(1, 3)
     @input spawnRadius: number = 50;
     @input spawnHeight: number = 0;
+    @input camera: Camera;
 
     spawnTimer: number = 0;
 
@@ -25,6 +26,7 @@ export class Spawner extends BaseScriptComponent {
         let angle = Math.random() * Math.PI * 2;
         let x = Math.cos(angle) * this.spawnRadius;
         let z = Math.sin(angle) * this.spawnRadius;
-        enemy.getTransform().setWorldPosition(new vec3(x, this.spawnHeight, z));
+        let camPosition = this.camera.getTransform().getWorldPosition();
+        enemy.getTransform().setWorldPosition(camPosition.add(new vec3(x, this.spawnHeight, z)));
     }
 }

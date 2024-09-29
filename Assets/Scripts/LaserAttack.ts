@@ -3,40 +3,52 @@ import { SIK } from "SpectaclesInteractionKit/SIK"
 
 @component
 export class LaserAttack extends BaseScriptComponent {
-    private gestureModule: GestureModule = require('LensStudio:GestureModule');
+	private gestureModule: GestureModule = require("LensStudio:GestureModule");
 
-    @input
-    cylinderRef: SceneObject
+	@input
+	cylinderRef: SceneObject;
 
-    @input
-    originObj: SceneObject;
+	@input
+	originObj: SceneObject;
 
-    @input
-    targetObj: SceneObject;
+	@input
+	targetObj: SceneObject;
 
-    cursorController = SIK.CursorController;
+	// cursorController = SIK.CursorController;
 
+	onAwake() {
 
-    onAwake() {
-        this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
-    }
+        this.gestureModule
+            .getTargetingDataEvent(GestureModule.HandType.Right)
+            .add((targetArgs: TargetingDataArgs) => {
 
-    onUpdate(){
+                let origin = targetArgs.rayOriginInWorld;
+                let direction = targetArgs.rayDirectionInWorld.normalize();
 
-        let cursors = this.cursorController.getAllCursors()
-        if (cursors.length > 0) {
-            let cursorPos = cursors[0].cursorPosition;
-            this.targetObj.getTransform().setWorldPosition(cursorPos);
-        }
-        
-        const start = this.originObj.getTransform().getWorldPosition();
-        const end = this.targetObj.getTransform().getWorldPosition();
+                this.originObj.getTransform().setWorldPosition(origin);
+                this.targetObj.getTransform().setWorldPosition(origin.add(direction.uniformScale(100)));
 
-        const direction = end.sub(start).normalize();
-        const distance = end.distance(start);
+            }
+        )
+		this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
+	}
 
-        this.cylinderRef.getTransform().setWorldPosition(start.add(direction.uniformScale(distance / 2)));
-        this.cylinderRef.getTransform().setWorldScale(new vec3(0.1, 0.1, distance));
-        this.cylinderRef.getTransform().setWorldRotation(quat.lookAt(direction, vec3.up()));
-    }
+	onUpdate() {
+
+		const start = this.originObj.getTransform().getWorldPosition();
+		const end = this.targetObj.getTransform().getWorldPosition();
+
+		const direction = end.sub(start).normalize();
+		const distance = end.distance(start);
+
+		this.cylinderRef
+			.getTransform()
+			.setWorldPosition(start.add(direction.uniformScale(distance / 2)));
+		this.cylinderRef
+			.getTransform()
+			.setWorldScale(new vec3(0.1, 0.1, distance));
+		this.cylinderRef
+			.getTransform()
+			.setWorldRotation(quat.lookAt(direction, vec3.up()));
+	}
 }

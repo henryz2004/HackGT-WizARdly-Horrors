@@ -4735,7 +4735,6 @@
   Enabled: true
   ScriptAsset: !<reference> 88260743-dddf-448e-be70-d5df322cc212
   ScriptInputsDefault:
-    spawnRadius: true
     spawnHeight: true
   ScriptTypesDefault:
     {}
@@ -4743,8 +4742,9 @@
     "":
       enemyPrefab: !<reference.ObjectPrefab> 67bd20e9-0d1f-47f9-82db-100b6eb42e22
       spawnDelayRange: !<Vec2> {x: 1.000000, y: 5.000000}
-      spawnRadius: !<float> 50.000000
+      spawnRadius: !<float> 200.000000
       spawnHeight: !<float> 0.000000
+      camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
   ScriptTypes:
     "":
       {}
