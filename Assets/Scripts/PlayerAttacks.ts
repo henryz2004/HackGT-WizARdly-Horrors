@@ -57,7 +57,7 @@ export class PlayerAttacks extends BaseScriptComponent {
         
         
         let dir : vec3 = targetArgs.rayDirectionInWorld
-        dir.y = dir.y * 0.5;
+        dir.y = 0.1;
         rb.addForce(dir.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
         
         
