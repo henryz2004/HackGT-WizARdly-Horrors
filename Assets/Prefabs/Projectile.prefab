@@ -59,7 +59,7 @@
     {}
   ScriptInputs:
     "":
-      {}
+      projDamage: !<float> 5.000000
   ScriptTypes:
     "":
       {}

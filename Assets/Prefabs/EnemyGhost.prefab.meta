@@ -1,0 +1,126 @@
+- !<AssetImportMetadata/90162c23-721e-43c4-9474-09fab11d9e4f>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 0f36cf5d-f0fc-496f-a403-e44ea915978c
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 0f36cf5d-f0fc-496f-a403-e44ea915978c
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> ab832dfc-39df-465d-8387-e9da5b79821e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/29cb55df-f53e-45db-afe3-09266355dbfe>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/15c74130-6520-4eef-a824-2800a1e039b6>
+  PackagePath: ""
+  objects:
+    - !<own> d6080a1c-b8cd-418d-850c-c199f8d05c30
+  LazyLoading: false
+  RetainAssets: true
+- !<AudioComponent/398bce22-b047-463b-accb-be878c6913d3>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
+- !<ScriptComponent/a09320df-c615-4182-a98c-2d6948eb0400>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/ab832dfc-39df-465d-8387-e9da5b79821e>
+  SourceRemaps:
+    - 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db: 398bce22-b047-463b-accb-be878c6913d3
+    - 913818d9-5b8c-4036-a273-e94e7abbd71e: d6080a1c-b8cd-418d-850c-c199f8d05c30
+    - b388d806-96cd-416b-839d-71e0f4d582ba: b6268b9f-f45f-4440-8504-449b2e314c32
+    - c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d: a09320df-c615-4182-a98c-2d6948eb0400
+    - db6c52f0-ecdb-401d-95f2-3a56c67d9019: d720478c-7a95-40f6-9af9-e25c2bf74c0f
+  SourceState: !<own> 15c74130-6520-4eef-a824-2800a1e039b6
+- !<BodyComponent/b6268b9f-f45f-4440-8504-449b2e314c32>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<SceneObject/d6080a1c-b8cd-418d-850c-c199f8d05c30>
+  PrefabRemaps:
+    []
+  Name: EnemyGhost
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a09320df-c615-4182-a98c-2d6948eb0400
+    - !<own> d720478c-7a95-40f6-9af9-e25c2bf74c0f
+    - !<own> b6268b9f-f45f-4440-8504-449b2e314c32
+    - !<own> 398bce22-b047-463b-accb-be878c6913d3
+- !<ScriptComponent/d720478c-7a95-40f6-9af9-e25c2bf74c0f>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      maxHealth: !<float> 10.000000
+  ScriptTypes:
+    "":
+      {}

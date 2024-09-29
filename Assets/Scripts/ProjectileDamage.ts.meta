@@ -24,14 +24,13 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    {}
+    projDamage: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    -
-      {}
+    - projDamage: !<float> 0.000000
   ScriptTypes:
     -
       {}
   InputLines:
-    []
+    - // @input float projDamage

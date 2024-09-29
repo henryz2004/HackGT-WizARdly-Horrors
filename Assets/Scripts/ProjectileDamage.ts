@@ -1,29 +1,42 @@
+import { EnemyBehaviour } from "./EnemyBehaviour"
+
 @component
 export class ProjectileDamage extends BaseScriptComponent {
-    rb = this.getSceneObject().getComponent('Physics.BodyComponent');
+	@input
+	projDamage: number;
+	rb = this.getSceneObject().getComponent("Physics.BodyComponent");
 
-    onAwake() {
-        let store = global.persistentStorageSystem.store;
-		let scoreKey = "totalScore";
+	onAwake() {
 
-        this.rb.onCollisionEnter.add((e: CollisionEnterEventArgs) => {
+		this.rb.onCollisionEnter.add((e: CollisionEnterEventArgs) => {
+			print("COLLISION HAPPENED");
+			let collision: Collision = e.collision;
 
-            print("COLLISION HAPPENED")
-            let collision: Collision = e.collision;
-            
-            let collider: ColliderComponent = e.collision.collider
+			let collider: ColliderComponent = e.collision.collider;
 
-            if(collider.getSceneObject().name.startsWith("Enemy")){
-                
-                let currentScore = store.getInt(scoreKey);
-				currentScore += 1;
-				store.putInt(scoreKey, currentScore);
+			if (collider.getSceneObject().name.startsWith("Enemy")) {
+				
+                let other : SceneObject = collider.getSceneObject();
+                let otherScripts: ScriptComponent[] =
+					other.getComponents("ScriptComponent");
 
-                collision.collider.getSceneObject().destroy()
-                print('destroyed enemy')
-                this.getSceneObject().enabled = false;
-                
-            }
-          });
+				otherScripts = otherScripts.filter((val, i) => {
+					return val instanceof EnemyBehaviour;
+				});
+				let otherScript: EnemyBehaviour =
+					otherScripts[0] as EnemyBehaviour;
+
+				if (this.isEnemy(otherScript)) {
+					print("Found EnemyBehavior script");
+					otherScript.takeDamage(this.projDamage);
+				}
+
+				this.getSceneObject().enabled = false;
+			}
+		});
+	}
+
+    isEnemy(script: ScriptComponent) : script is EnemyBehaviour {
+        return script instanceof EnemyBehaviour
     }
 }

@@ -12,50 +12,20 @@
   ImporterSettings: !<AssetImporterSettings/308140fe-2a4b-4725-afec-8d3acaa9372b>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/37dab768-f37c-4f7a-80e4-00a4258b639d>
-  PrefabRemaps:
-    []
-  Name: ProjectileDamage
-  Enabled: true
-  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      {}
-  ScriptTypes:
-    "":
-      {}
+- !<ObjectPrefab/0a69029f-c7fa-4ffe-9182-7d71e822baef>
+  PackagePath: ""
+  objects:
+    - !<own> fcce0636-b0cf-4742-86e4-48ec230e908f
+  LazyLoading: false
+  RetainAssets: true
 - !<ObjectPrefabAssetData/43951129-edeb-40af-ba2a-1bf6aef9a818>
   SourceRemaps:
-    - 05355764-37f5-47be-8a88-040a1d31f818: bea4a337-6110-4c0d-9332-71cf1417fc46
-    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: 67aaeec5-2348-4c56-955e-11798d902f29
-    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 37dab768-f37c-4f7a-80e4-00a4258b639d
-    - dfaf2618-3054-4cd1-ba4d-076696e901b6: d5fba621-a9f3-4eaf-9404-0feb51c087a0
-  SourceState: !<own> c54e10c2-5e80-4265-8a78-d40b78a7e761
-- !<RenderMeshVisual/67aaeec5-2348-4c56-955e-11798d902f29>
-  PrefabRemaps:
-    []
-  Name: Render Mesh Visual
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
-  Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<BodyComponent/bea4a337-6110-4c0d-9332-71cf1417fc46>
+    - 05355764-37f5-47be-8a88-040a1d31f818: 4605f474-dc5e-4447-b8d8-084775da104c
+    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: d45d528c-f58b-4cbb-a32e-17bddc959f7f
+    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 85444774-b9d5-4ca5-afe7-631be3a698c7
+    - dfaf2618-3054-4cd1-ba4d-076696e901b6: fcce0636-b0cf-4742-86e4-48ec230e908f
+  SourceState: !<own> 0a69029f-c7fa-4ffe-9182-7d71e822baef
+- !<BodyComponent/4605f474-dc5e-4447-b8d8-084775da104c>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -78,13 +48,43 @@
   BodySettingValue: 16.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ObjectPrefab/c54e10c2-5e80-4265-8a78-d40b78a7e761>
-  PackagePath: ""
-  objects:
-    - !<own> d5fba621-a9f3-4eaf-9404-0feb51c087a0
-  LazyLoading: false
-  RetainAssets: true
-- !<SceneObject/d5fba621-a9f3-4eaf-9404-0feb51c087a0>
+- !<ScriptComponent/85444774-b9d5-4ca5-afe7-631be3a698c7>
+  PrefabRemaps:
+    []
+  Name: ProjectileDamage
+  Enabled: true
+  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      projDamage: !<float> 5.000000
+  ScriptTypes:
+    "":
+      {}
+- !<RenderMeshVisual/d45d528c-f58b-4cbb-a32e-17bddc959f7f>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
+  Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/fcce0636-b0cf-4742-86e4-48ec230e908f>
   PrefabRemaps:
     []
   Name: Projectile
@@ -98,6 +98,6 @@
   Children:
     []
   Components:
-    - !<own> 67aaeec5-2348-4c56-955e-11798d902f29
-    - !<own> 37dab768-f37c-4f7a-80e4-00a4258b639d
-    - !<own> bea4a337-6110-4c0d-9332-71cf1417fc46
+    - !<own> d45d528c-f58b-4cbb-a32e-17bddc959f7f
+    - !<own> 85444774-b9d5-4ca5-afe7-631be3a698c7
+    - !<own> 4605f474-dc5e-4447-b8d8-084775da104c
