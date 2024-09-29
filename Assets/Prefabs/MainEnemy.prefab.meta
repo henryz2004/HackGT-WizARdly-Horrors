@@ -12,7 +12,95 @@
   ImporterSettings: !<AssetImporterSettings/ead2ba8f-00fb-4db8-bc9a-c73d7cfec9ce>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<BodyComponent/3452a6ba-50f5-4592-8fb3-fd02d7f0deca>
+- !<ObjectPrefab/079037c1-d809-40f8-9371-1eb5b13cd654>
+  PackagePath: ""
+  objects:
+    - !<own> b51f6ffe-e5b4-4817-8fca-ece48548baf0
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/1cee0d35-ad7a-454a-99a2-a5a08bd98c27>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/5bb3934d-8e51-49b0-821c-4e614929a910>
+  SourceRemaps:
+    - 5322dcd0-bb9d-4262-bc34-f28d85193a48: ad5f6793-c59c-4736-b27a-1f2e0bc2e1cd
+    - 57a0df06-9065-4832-a3f4-5cff8cdef92a: d7ecbd48-fc59-4f70-b954-e32b267e3ba3
+    - 9c95edc4-b6ba-49c2-8743-cf015fdc6538: 1cee0d35-ad7a-454a-99a2-a5a08bd98c27
+    - e102d79f-3eb3-4128-aeac-6e49459e0426: 93507f6b-ce66-4a2d-90d1-d25dd54841f5
+    - f66b2ed0-6f84-4a9e-84a6-1a8329e74973: b51f6ffe-e5b4-4817-8fca-ece48548baf0
+  SourceState: !<own> 079037c1-d809-40f8-9371-1eb5b13cd654
+- !<AudioComponent/93507f6b-ce66-4a2d-90d1-d25dd54841f5>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
+- !<ScriptComponent/ad5f6793-c59c-4736-b27a-1f2e0bc2e1cd>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component
+  Enabled: true
+  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b51f6ffe-e5b4-4817-8fca-ece48548baf0>
+  PrefabRemaps:
+    []
+  Name: MainEnemy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ad5f6793-c59c-4736-b27a-1f2e0bc2e1cd
+    - !<own> 1cee0d35-ad7a-454a-99a2-a5a08bd98c27
+    - !<own> d7ecbd48-fc59-4f70-b954-e32b267e3ba3
+    - !<own> 93507f6b-ce66-4a2d-90d1-d25dd54841f5
+- !<BodyComponent/d7ecbd48-fc59-4f70-b954-e32b267e3ba3>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -35,72 +123,3 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/5173f008-4671-4043-b96a-fb4f02536640>
-  PrefabRemaps:
-    []
-  Name: EnemyBehaviour
-  Enabled: true
-  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      forwardSpeed: !<float> 20.000000
-      turnSpeed: !<float> 1.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-  ScriptTypes:
-    "":
-      {}
-- !<ObjectPrefabAssetData/5bb3934d-8e51-49b0-821c-4e614929a910>
-  SourceRemaps:
-    - 5322dcd0-bb9d-4262-bc34-f28d85193a48: b45dafb5-65fd-4f51-8722-0b2915eaa085
-    - 57a0df06-9065-4832-a3f4-5cff8cdef92a: 3452a6ba-50f5-4592-8fb3-fd02d7f0deca
-    - 9c95edc4-b6ba-49c2-8743-cf015fdc6538: 5173f008-4671-4043-b96a-fb4f02536640
-    - f66b2ed0-6f84-4a9e-84a6-1a8329e74973: a462fc26-9b3a-481e-8741-d97a8bcb7357
-  SourceState: !<own> b910f3ac-7806-49f3-a284-1a20e3dbd7aa
-- !<SceneObject/a462fc26-9b3a-481e-8741-d97a8bcb7357>
-  PrefabRemaps:
-    []
-  Name: MainEnemy
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> b45dafb5-65fd-4f51-8722-0b2915eaa085
-    - !<own> 5173f008-4671-4043-b96a-fb4f02536640
-    - !<own> 3452a6ba-50f5-4592-8fb3-fd02d7f0deca
-- !<ScriptComponent/b45dafb5-65fd-4f51-8722-0b2915eaa085>
-  PrefabRemaps:
-    []
-  Name: Generative 3D Component
-  Enabled: true
-  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
-  ScriptInputsDefault:
-    renderOrder: true
-    useShadow: true
-    shadowDensity: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      renderOrder: 0
-      useShadow: true
-      shadowDensity: !<float> 1.000000
-  ScriptTypes:
-    "":
-      {}
-- !<ObjectPrefab/b910f3ac-7806-49f3-a284-1a20e3dbd7aa>
-  PackagePath: ""
-  objects:
-    - !<own> a462fc26-9b3a-481e-8741-d97a8bcb7357
-  LazyLoading: false
-  RetainAssets: true

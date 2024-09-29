@@ -3079,6 +3079,23 @@
   ScriptTypes:
     "":
       {}
+- !<AudioComponent/4924e9fc-8fe1-4c10-a78d-b187a920bad8>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<Canvas/492f9ebd-7a97-492f-826b-a7baab07368f>
   PrefabRemaps:
     []
@@ -5215,6 +5232,7 @@
   PrefabRemaps:
     - 337f66b6-eb8f-4879-bf2d-dadda221316d: 57a0df06-9065-4832-a3f4-5cff8cdef92a
     - 39c8b299-c1b0-41b4-b482-842ac6947b49: 5322dcd0-bb9d-4262-bc34-f28d85193a48
+    - 4924e9fc-8fe1-4c10-a78d-b187a920bad8: e102d79f-3eb3-4128-aeac-6e49459e0426
     - 73646647-e93b-4e0e-9263-e0ea7d1f5bf5: f66b2ed0-6f84-4a9e-84a6-1a8329e74973
     - b4493202-651f-4a99-84f1-712e5936f7b4: 9c95edc4-b6ba-49c2-8743-cf015fdc6538
   Name: MainEnemy
@@ -5231,6 +5249,7 @@
     - !<own> 39c8b299-c1b0-41b4-b482-842ac6947b49
     - !<own> b4493202-651f-4a99-84f1-712e5936f7b4
     - !<own> 337f66b6-eb8f-4879-bf2d-dadda221316d
+    - !<own> 4924e9fc-8fe1-4c10-a78d-b187a920bad8
 - !<RenderMeshVisual/7461700e-3c6d-4e3b-9f72-b9eeea8c974d>
   PrefabRemaps:
     []
@@ -6733,6 +6752,7 @@
       cylinderRef: !<reference.SceneObject> 6c6f49be-3f11-4965-b7e4-0910265c6249
       originObj: !<reference.SceneObject> e24b1c01-294e-4b9e-83ec-4dd5d5e9f4d5
       targetObj: !<reference.SceneObject> 2a791d73-1023-479c-90c9-f87786b9e85c
+      rightHandInteractor: !<MappingBased.HandInteractor> 24cf881f-0af4-45c8-97a1-e8d6a7511d5a
   ScriptTypes:
     "":
       {}

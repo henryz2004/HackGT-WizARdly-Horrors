@@ -14,6 +14,9 @@ export class EnemyBehaviour extends BaseScriptComponent {
     @input
     animation: AnimationCurveTrack
 
+    // @input
+    // spawnSound: AudioTrackAsset
+
     enemy = this.getSceneObject()
 
     frame = 0
@@ -53,6 +56,8 @@ export class EnemyBehaviour extends BaseScriptComponent {
     }
 
     private spawn(): void{
+
+        this.getSceneObject().getComponent("AudioComponent").play(0);
         this.frame += 1;
         if (this.frame == 16) {
             this.frame = 0;

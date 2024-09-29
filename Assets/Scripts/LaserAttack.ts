@@ -14,16 +14,24 @@ export class LaserAttack extends BaseScriptComponent {
 	@input
 	targetObj: SceneObject;
 
+    // @input
+    // rightHandTracker: HandTracking3DAsset;
+
+    @input
+    rightHandInteractor: HandInteractor;
+
 	// cursorController = SIK.CursorController;
 
 	onAwake() {
 
+        this.rightHandInteractor.startPoint
         this.gestureModule
             .getTargetingDataEvent(GestureModule.HandType.Right)
             .add((targetArgs: TargetingDataArgs) => {
 
-                let origin = targetArgs.rayOriginInWorld;
-                let direction = targetArgs.rayDirectionInWorld.normalize();
+                let origin = this.rightHandInteractor.startPoint;//targetArgs.rayOriginInWorld;
+                let target = this.rightHandInteractor.endPoint;
+                let direction = target.sub(origin).normalize();// targetArgs.rayDirectionInWorld.normalize();
 
                 this.originObj.getTransform().setWorldPosition(origin);
                 this.targetObj.getTransform().setWorldPosition(origin.add(direction.uniformScale(100)));

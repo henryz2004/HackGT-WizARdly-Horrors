@@ -26,6 +26,7 @@
   ScriptInputsHidden:
     cylinderRef: false
     originObj: false
+    rightHandInteractor: false
     targetObj: false
   ScriptTypesHidden:
     {}
@@ -33,6 +34,7 @@
     - cylinderRef: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       originObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       targetObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      rightHandInteractor: !<MappingBased.HandInteractor> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -40,3 +42,4 @@
     - // @input SceneObject cylinderRef
     - // @input SceneObject originObj
     - // @input SceneObject targetObj
+    - // @input HandInteractor rightHandInteractor
