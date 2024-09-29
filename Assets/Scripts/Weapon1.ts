@@ -2,7 +2,7 @@ import { HandInteractor } from "SpectaclesInteractionKit/Core/HandInteractor/Han
 import { SIK } from "SpectaclesInteractionKit/SIK"
 
 @component
-export class PlayerAttacks extends BaseScriptComponent {
+export class Weapon1 extends BaseScriptComponent {
     private gestureModule: GestureModule = require('LensStudio:GestureModule');
 
     @input 
@@ -30,18 +30,18 @@ export class PlayerAttacks extends BaseScriptComponent {
 
         
         if(this.attack_timer > 0){
-            print('ON COOLDOWN')
+            //print('ON COOLDOWN')
             
             return
         }
 
         this.attack_timer = this.attack_cooldown;
-        print('SHOT FIRED')
+        //print('SHOT FIRED')
 
 
         let curr_proj = this.projectile_obj.instantiate(this.projectile_container)
         this.projectile_list.push(curr_proj)
-        print("PROJECTILE LIST LENGTH: " + this.projectile_list.length)
+        //print("PROJECTILE LIST LENGTH: " + this.projectile_list.length)
         curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
         //curr_proj.getTransform().setWorldPosition(new vec3(0,0,-300))
 

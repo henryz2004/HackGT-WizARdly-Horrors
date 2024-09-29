@@ -25,6 +25,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     forwardSpeed: false
+    maxHealth: false
     playerObj: false
     turnSpeed: false
   ScriptTypesHidden:
@@ -33,6 +34,7 @@
     - forwardSpeed: !<float> 0.000000
       turnSpeed: !<float> 0.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      maxHealth: !<float> 0.000000
   ScriptTypes:
     -
       {}
@@ -40,3 +42,4 @@
     - // @input float forwardSpeed
     - // @input float turnSpeed
     - // @input SceneObject playerObj
+    - // @input float maxHealth

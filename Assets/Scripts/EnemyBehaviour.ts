@@ -10,13 +10,26 @@ export class EnemyBehaviour extends BaseScriptComponent {
     @input
     playerObj: SceneObject
 
-    
+    @input
+    maxHealth: number
+
+    health: number
 
     enemy = this.getSceneObject()
 
     
+
+
     onAwake() {
+        this.health = this.maxHealth;
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
+    }
+
+
+    public takeDamage(n: number){
+        print(this.health)
+        this.health -=n   
+        print(this.health)
     }
 
     onUpdate(){
