@@ -5,6 +5,8 @@
     - !<own> 0005641c-028d-459a-0000-000000014b4d
     - !<own> 597f6fa4-23e5-4230-9e74-1ece142cd000
     - !<own> 91c7387c-8133-4acc-a38f-bb78a5eb925e
+    - !<own> 9aecc664-181d-4b24-9edb-d256b1a56a16
+    - !<own> 9362f63d-27c5-4550-9f6d-bf9fb5976f19
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -4746,6 +4748,24 @@
     - !<own> 1069600c-1547-4542-b3fb-a9d20eb01b09
   Components:
     []
+- !<SceneObject/7e744c04-66e5-4091-ba58-b8647e6ac0f0>
+  PrefabRemaps:
+    - 7e744c04-66e5-4091-ba58-b8647e6ac0f0: dfaf2618-3054-4cd1-ba4d-076696e901b6
+    - b87a21a3-e907-4fb6-9346-d6525c8364ff: 11316f5b-da66-4950-8c2d-3a5c5af19f2f
+    - eb9883af-4687-4aab-8d95-a79fa45bd04c: 1f68e5e5-c56b-49bd-a953-797b12a8263b
+  Name: Projectile
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b87a21a3-e907-4fb6-9346-d6525c8364ff
+    - !<own> eb9883af-4687-4aab-8d95-a79fa45bd04c
 - !<ScriptComponent/7e8014f6-bc26-4a4d-a4cb-9a29fa6bffeb>
   PrefabRemaps:
     []
@@ -5617,6 +5637,21 @@
   Components:
     - !<own> 4b844cec-c9de-4f86-ad25-8211aa185431
     - !<own> 744a6c2f-df11-4f8b-bcd2-65a8bfb489d7
+- !<SceneObject/9362f63d-27c5-4550-9f6d-bf9fb5976f19>
+  PrefabRemaps:
+    []
+  Name: PlayerAttacks
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f51be577-fb32-42b0-9abd-c15bca9b6056
 - !<Canvas/93da15f6-b214-42f8-890a-46bcb917b89a>
   PrefabRemaps:
     []
@@ -5835,6 +5870,21 @@
     []
   Components:
     - !<own> 03142dbd-a09e-4262-a111-19e44ac744e3
+- !<SceneObject/9aecc664-181d-4b24-9edb-d256b1a56a16>
+  PrefabRemaps:
+    []
+  Name: ProjectileContainer
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7e744c04-66e5-4091-ba58-b8647e6ac0f0
+  Components:
+    []
 - !<SceneObject/9dedaa98-754f-4653-bf5f-bec695afd0bd>
   PrefabRemaps:
     []
@@ -6554,6 +6604,26 @@
     - !<own> 7ed5bfbd-42a1-4c92-be96-c39dbf8f4efb
   Components:
     - !<own> e1f50b15-59cf-4834-8a38-2b8743104378
+- !<RenderMeshVisual/b87a21a3-e907-4fb6-9346-d6525c8364ff>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
+  Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<ScriptComponent/b8d3ab67-0656-4a46-a1a0-f4afeed70284>
   PrefabRemaps:
     []
@@ -8290,6 +8360,22 @@
   Components:
     - !<own> f7dbcf9d-157e-4b98-9b2a-725d70a1aa56
     - !<own> 4ed00208-0d3e-44fa-88ba-465ed4141ad0
+- !<ScriptComponent/eb9883af-4687-4aab-8d95-a79fa45bd04c>
+  PrefabRemaps:
+    []
+  Name: ProjectileDamage
+  Enabled: true
+  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
 - !<Text/ebe0b2b4-fe25-4b11-a8dc-98b887d43ff3>
   PrefabRemaps:
     []
@@ -8590,6 +8676,25 @@
   Components:
     - !<own> ee37b1f3-32a4-484d-a4bb-43b2bc54befa
     - !<own> d660528f-269c-47e6-a7ae-0313f2124ea6
+- !<ScriptComponent/f51be577-fb32-42b0-9abd-c15bca9b6056>
+  PrefabRemaps:
+    []
+  Name: PlayerAttacks
+  Enabled: true
+  ScriptAsset: !<reference> 55a8422f-6e38-4f42-96a3-d1241822eea3
+  ScriptInputsDefault:
+    attack_cooldown: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      attack_cooldown: !<float> 1.000000
+      projectile_obj: !<reference.ObjectPrefab> 7f417bb0-0c00-488c-a019-ec5e086d47ce
+      launch_velocity: !<float> 1.000000
+      projectile_container: !<reference.SceneObject> 9aecc664-181d-4b24-9edb-d256b1a56a16
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/f52a613f-770c-4de6-9de0-ed55b90d5cd5>
   PrefabRemaps:
     []

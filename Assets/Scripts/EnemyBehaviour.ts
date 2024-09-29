@@ -18,11 +18,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
     }
 
     onUpdate(){
-        if(this.getSceneObject() === null){
-            return
-        }
         this.move()
-
         //print("HAHAHAH")
     }
 

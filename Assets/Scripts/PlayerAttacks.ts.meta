@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/1d93eedc-f91c-49fb-bd66-2a11af361cd0>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 55a8422f-6e38-4f42-96a3-d1241822eea3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 55a8422f-6e38-4f42-96a3-d1241822eea3
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    TypeScriptAsset: !<own> 6099cacb-31ea-4ba5-a3bb-2e7d0046656b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/33fb603b-426d-4d8e-b1b2-ced8e6fe1438>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/6099cacb-31ea-4ba5-a3bb-2e7d0046656b>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    attack_cooldown: false
+    launch_velocity: false
+    projectile_container: false
+    projectile_obj: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - attack_cooldown: !<float> 1.000000
+      projectile_obj: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      launch_velocity: !<float> 0.000000
+      projectile_container: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input float attack_cooldown = 1.0
+    - // @input Asset.ObjectPrefab projectile_obj
+    - // @input float launch_velocity
+    - // @input SceneObject projectile_container
