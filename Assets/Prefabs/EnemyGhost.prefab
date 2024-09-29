@@ -11,7 +11,7 @@
   Enabled: true
   AudioTrack: !<reference> 7b38d9dc-eb0d-4eee-9db8-f9ffe93baa6e
   EnableAutoplayLoop: false
-  Volume: 1.000000
+  Volume: 0.700000
   EnableMixToSnap: false
   RecordVolume: 1.000000
   EnableSpatialAudio: true
@@ -48,7 +48,7 @@
   Enabled: true
   AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
   EnableAutoplayLoop: false
-  Volume: 0.700000
+  Volume: 0.270000
   EnableMixToSnap: false
   RecordVolume: 1.000000
   EnableSpatialAudio: true
@@ -263,8 +263,7 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    damageRange: true
-    damage: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -272,9 +271,9 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      damageRange: !<float> 0.000000
-      damage: !<float> 0.000000
-      maxHealth: !<float> 10.000000
+      damageRange: !<float> 8.000000
+      damage: !<float> 1.000000
+      maxHealth: !<float> 15.000000
   ScriptTypes:
     "":
       {}

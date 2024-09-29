@@ -1,0 +1,87 @@
+- !<ObjectPrefab/17c809fc-f709-449d-95a7-09b1fbc8e134>
+  PackagePath: ""
+  objects:
+    - !<own> c4c0f673-c4e1-4006-bdbb-24ad94542558
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/20912917-c846-4173-9618-bf7935a1c29d>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: false
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<SceneObject/c4c0f673-c4e1-4006-bdbb-24ad94542558>
+  PrefabRemaps:
+    []
+  Name: EnemyBat
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 17.366692, z: -146.088440}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> fd137b21-6d19-4498-8b7a-8964be2956cf
+    - !<own> e4e3a006-eca7-44dc-b451-e15778fa78d0
+    - !<own> 20912917-c846-4173-9618-bf7935a1c29d
+- !<ScriptComponent/e4e3a006-eca7-44dc-b451-e15778fa78d0>
+  PrefabRemaps:
+    []
+  Name: Generative 3D Component 1
+  Enabled: true
+  ScriptAsset: !<reference> baa59112-8067-4c70-9309-3f59e2b6d7c4
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/fd137b21-6d19-4498-8b7a-8964be2956cf>
+  PrefabRemaps:
+    []
+  Name: EnemyBatBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> 0f39fcda-cd46-4685-9b0b-d7d06702f0ac
+  ScriptInputsDefault:
+    forwardSpeed: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 5.000000
+      strafeSpeed: !<float> 30.000000
+      maxHealth: !<float> 4.000000
+      damageRange: !<float> 10.000000
+      damage: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+  ScriptTypes:
+    "":
+      {}
