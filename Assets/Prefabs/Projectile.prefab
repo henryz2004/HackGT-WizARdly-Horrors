@@ -54,12 +54,12 @@
   Enabled: true
   ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
   ScriptInputsDefault:
-    {}
+    projDamage: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      projDamage: !<float> 5.000000
+      projDamage: !<float> 0.000000
   ScriptTypes:
     "":
       {}

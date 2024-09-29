@@ -111,7 +111,7 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    {}
+    maxHealth: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -119,8 +119,7 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-      maxHealth: !<float> 10.000000
+      maxHealth: !<float> 0.000000
   ScriptTypes:
     "":
       {}

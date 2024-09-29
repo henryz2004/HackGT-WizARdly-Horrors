@@ -11,9 +11,6 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	@input
 	playerObj: SceneObject;
 
-	@input
-	animation: AnimationCurveTrack;
-
 	@input maxHealth: number;
 	health: number;
 	enemy = this.getSceneObject();
@@ -27,6 +24,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	onAwake() {
 		this.health = this.maxHealth;
 		this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
+        this.enemy.getTransform().setWorldScale(new vec3(35,35,35));
 	}
 
 	public takeDamage(damage: number): void {
@@ -47,50 +45,27 @@ export class EnemyBehaviour extends BaseScriptComponent {
 		if (this.getSceneObject() === null) {
 			return;
 		}
-		if (this.justSpawned == true) {
-			this.spawn();
-			// print("spawn scale")
-		} else {
-			this.move();
-			// print("movement")
-		}
+		this.move();
+
 	}
 
-	private lose(): void {
-		// jumpscare lol
-		// give it 30 frames
-		this.frame += 1;
-		if (this.frame == 31) {
-			this.frame = 0;
-			this.jumpscare = false;
-		}
-		this.enemy
-			.getTransform()
-			.setWorldScale(
-				this.enemy
-					.getTransform()
-					.getWorldScale()
-					.mult(new vec3(2, 2, 2))
-			);
-	}
-
-	private spawn(): void {
-		this.getSceneObject().getComponent("AudioComponent").play(0);
-		this.frame += 1;
-		if (this.frame == 16) {
-			this.frame = 0;
-			this.justSpawned = false;
-		}
-		this.enemy
-			.getTransform()
-			.setWorldScale(
-				this.enemy
-					.getTransform()
-					.getWorldScale()
-					.mult(new vec3(1.25, 1.25, 1.25))
-			);
-		// print(this.enemy.getTransform().getWorldScale());
-	}
+	// private lose(): void {
+	// 	// jumpscare lol
+	// 	// give it 30 frames
+	// 	this.frame += 1;
+	// 	if (this.frame == 31) {
+	// 		this.frame = 0;
+	// 		this.jumpscare = false;
+	// 	}
+	// 	this.enemy
+	// 		.getTransform()
+	// 		.setWorldScale(
+	// 			this.enemy
+	// 				.getTransform()
+	// 				.getWorldScale()
+	// 				.mult(new vec3(2, 2, 2))
+	// 		);
+	// }
 
 	private move(): void {
 		this.frame += 1;
@@ -128,9 +103,6 @@ export class EnemyBehaviour extends BaseScriptComponent {
 					this.turnSpeed * getDeltaTime()
 				)
 			);
-
-		let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animation.evaluateVec3(this.frame/30).mult(new vec3(0,6,0)));
-
-		this.enemy.getTransform().setWorldPosition(bobbing);
+        
 	}
 }

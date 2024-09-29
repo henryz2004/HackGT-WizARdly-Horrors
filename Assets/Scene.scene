@@ -14,7 +14,6 @@
     - !<own> dba1679a-7c70-4662-ac77-3c4dc03bbc4b
     - !<own> 1f2ad7a9-4af6-4514-9e78-04bb5c429d38
     - !<own> 9e5ffa78-05ce-4839-902f-26533950aca4
-    - !<own> 73646647-e93b-4e0e-9263-e0ea7d1f5bf5
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -2277,29 +2276,6 @@
   ScriptTypes:
     "":
       {}
-- !<BodyComponent/337f66b6-eb8f-4879-bf2d-dadda221316d>
-  PrefabRemaps:
-    []
-  Name: Physics Body
-  Enabled: true
-  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
-  Matter: !<reference> 00000000-0000-0000-0000-000000000000
-  Filter: !<reference> 00000000-0000-0000-0000-000000000000
-  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
-  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
-  EnableSmoothing: false
-  PositionTension: 30.000000
-  RotationTension: 30.000000
-  ForceCompound: false
-  Intangible: false
-  ShowCollider: false
-  Dynamic: false
-  BodySetting: Density
-  BodySettingValue: 1.000000
-  Damping: 0.000000
-  AngularDamping: 0.000000
 - !<ScriptComponent/33f2323e-ce43-4d4f-9b50-693664211100>
   PrefabRemaps:
     []
@@ -2527,26 +2503,6 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<ScriptComponent/39c8b299-c1b0-41b4-b482-842ac6947b49>
-  PrefabRemaps:
-    []
-  Name: Generative 3D Component
-  Enabled: true
-  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
-  ScriptInputsDefault:
-    renderOrder: true
-    useShadow: true
-    shadowDensity: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      renderOrder: 0
-      useShadow: true
-      shadowDensity: !<float> 1.000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/3a8e4b65-b785-4f04-9699-fdb009c0b2fa>
   PrefabRemaps:
     []
@@ -3100,23 +3056,6 @@
   ScriptTypes:
     "":
       {}
-- !<AudioComponent/4924e9fc-8fe1-4c10-a78d-b187a920bad8>
-  PrefabRemaps:
-    []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
 - !<Canvas/492f9ebd-7a97-492f-826b-a7baab07368f>
   PrefabRemaps:
     []
@@ -4773,12 +4712,13 @@
   Enabled: true
   ScriptAsset: !<reference> 88260743-dddf-448e-be70-d5df322cc212
   ScriptInputsDefault:
+    enemyPrefab: true
     spawnHeight: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      enemyPrefab: !<reference.ObjectPrefab> 0f36cf5d-f0fc-496f-a403-e44ea915978c
+      enemyPrefab: !<reference.ObjectPrefab> 06818b29-5841-41de-836f-4e75a183f530
       spawnDelayRange: !<Vec2> {x: 1.000000, y: 5.000000}
       spawnRadius: !<float> 200.000000
       spawnHeight: !<float> 0.000000
@@ -5249,28 +5189,6 @@
     []
   Components:
     []
-- !<SceneObject/73646647-e93b-4e0e-9263-e0ea7d1f5bf5>
-  PrefabRemaps:
-    - 337f66b6-eb8f-4879-bf2d-dadda221316d: b388d806-96cd-416b-839d-71e0f4d582ba
-    - 39c8b299-c1b0-41b4-b482-842ac6947b49: c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d
-    - 4924e9fc-8fe1-4c10-a78d-b187a920bad8: 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db
-    - 73646647-e93b-4e0e-9263-e0ea7d1f5bf5: 913818d9-5b8c-4036-a273-e94e7abbd71e
-    - b4493202-651f-4a99-84f1-712e5936f7b4: db6c52f0-ecdb-401d-95f2-3a56c67d9019
-  Name: EnemyGhost
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 39c8b299-c1b0-41b4-b482-842ac6947b49
-    - !<own> b4493202-651f-4a99-84f1-712e5936f7b4
-    - !<own> 337f66b6-eb8f-4879-bf2d-dadda221316d
-    - !<own> 4924e9fc-8fe1-4c10-a78d-b187a920bad8
 - !<RenderMeshVisual/7461700e-3c6d-4e3b-9f72-b9eeea8c974d>
   PrefabRemaps:
     []
@@ -7245,12 +7163,12 @@
   Enabled: true
   ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
   ScriptInputsDefault:
-    {}
+    projDamage: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      projDamage: !<float> 5.000000
+      projDamage: !<float> 0.000000
   ScriptTypes:
     "":
       {}
@@ -7505,26 +7423,6 @@
     - !<own> 4ffd2039-f59b-4a33-9267-4051dc92ace3
   Components:
     []
-- !<ScriptComponent/b4493202-651f-4a99-84f1-712e5936f7b4>
-  PrefabRemaps:
-    []
-  Name: EnemyBehaviour
-  Enabled: true
-  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      forwardSpeed: !<float> 20.000000
-      turnSpeed: !<float> 1.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-      maxHealth: !<float> 10.000000
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/b46c3d38-4f42-4702-9ac3-68e82da67239>
   PrefabRemaps:
     []
