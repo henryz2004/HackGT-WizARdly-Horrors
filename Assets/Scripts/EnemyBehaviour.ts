@@ -17,7 +17,11 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	@input maxHealth: number;
 	health: number;
 	enemy = this.getSceneObject();
-    private player = Player.getInstance();
+	private player = Player.getInstance();
+	sounds: AudioComponent[] =
+		this.getSceneObject().getComponents("AudioComponent");
+
+    private healthText : Text3D = this.getSceneObject().getComponent("Text3D");
 
 	frame = 0;
 
@@ -31,14 +35,18 @@ export class EnemyBehaviour extends BaseScriptComponent {
 
 	public takeDamage(damage: number): void {
 		this.health -= damage;
+        this.healthText.text = this.health%1===0?(this.health+"/"+this.maxHealth):this.health.toPrecision(1)+"/"+this.maxHealth;
 		if (this.health <= 0) {
 			this.kill();
+		} else {
+            this.sounds[1].play(0);
 		}
 	}
 
 	private kill(): void {
-        this.player.setScore(this.player.getScore() + 1);
+		this.player.setScore(this.player.getScore() + 1);
 		if (this.getSceneObject()) {
+            this.sounds[2].play(0);
 			this.getSceneObject().destroy();
 		}
 	}
@@ -75,7 +83,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	}
 
 	private spawn(): void {
-		this.getSceneObject().getComponent("AudioComponent").play(0);
+		this.sounds[0].play(0);
 		this.frame += 1;
 		if (this.frame == 16) {
 			this.frame = 0;
@@ -129,7 +137,14 @@ export class EnemyBehaviour extends BaseScriptComponent {
 				)
 			);
 
-		let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animation.evaluateVec3(this.frame/30).mult(new vec3(0,6,0)));
+		let bobbing = this.enemy
+			.getTransform()
+			.getWorldPosition()
+			.add(
+				this.animation
+					.evaluateVec3(this.frame / 30)
+					.mult(new vec3(0, 6, 0))
+			);
 
 		this.enemy.getTransform().setWorldPosition(bobbing);
 	}

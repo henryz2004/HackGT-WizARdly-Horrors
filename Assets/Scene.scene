@@ -1183,6 +1183,71 @@
     bottom: 0.000000
     right: 0.000000
     top: 0.000000
+- !<Text/195114ec-cc50-4e25-b506-b4c58953c0a7>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: false
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: |
+    5/5
+
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 6
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -0.500000
+    bottom: 0.000000
+    right: 0.500000
+    top: 0.850000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+  Outline: !<OutlineSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings/00000000-0000-0000-0000-000000000000>
+    Enabled: false
+    Fill: !<TextFill/00000000-0000-0000-0000-000000000000>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout/00000000-0000-0000-0000-000000000000>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
 - !<SceneObject/1a151021-44e9-4f26-9581-e22af688eac9>
   PrefabRemaps:
     []
@@ -1898,6 +1963,41 @@
     - !<own> 518a56fe-84cc-457a-ac44-665f19946cf7
     - !<own> abedccd5-a6f5-435b-a2e8-957826752e57
     - !<own> f2f4d20a-68c7-4e43-87cc-f7d35fd6a121
+- !<Text3D/29c6808a-344b-4412-902b-8e1cb492e78e>
+  PrefabRemaps:
+    []
+  Name: Text3D
+  Enabled: false
+  RenderOrder: 5
+  StretchMode: Stretch
+  VerticalAlignment: Top
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 2b4960e6-cba3-4edf-89ff-eaa2bbfc09ed
+  Text: " "
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 6
+  ExtrusionDepth: 0.100000
+  ExtrudeDirection: Both
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -0.500000
+    bottom: 0.000000
+    right: 0.500000
+    top: 0.850000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  AdvancedLayout: !<TextAdvancedLayout/00000000-0000-0000-0000-000000000000>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
 - !<RenderMeshVisual/2a30125f-13fc-4b98-b43f-cdf599c2ede0>
   PrefabRemaps:
     []
@@ -2283,8 +2383,8 @@
   Name: Physics Body
   Enabled: true
   Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
-    FitVisual: true
-    Radius: 6.000000
+    FitVisual: false
+    Radius: 0.600000
   Matter: !<reference> 00000000-0000-0000-0000-000000000000
   Filter: !<reference> 00000000-0000-0000-0000-000000000000
   OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2294,7 +2394,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: false
+  ShowCollider: true
   Dynamic: false
   BodySetting: Density
   BodySettingValue: 1.000000
@@ -2656,7 +2756,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 0
+  RenderOrder: 10
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -3107,7 +3207,7 @@
   Enabled: true
   AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
   EnableAutoplayLoop: false
-  Volume: 1.000000
+  Volume: 0.700000
   EnableMixToSnap: false
   RecordVolume: 1.000000
   EnableSpatialAudio: false
@@ -4773,15 +4873,15 @@
   Enabled: true
   ScriptAsset: !<reference> 88260743-dddf-448e-be70-d5df322cc212
   ScriptInputsDefault:
-    spawnHeight: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       enemyPrefab: !<reference.ObjectPrefab> 0f36cf5d-f0fc-496f-a403-e44ea915978c
       spawnDelayRange: !<Vec2> {x: 1.000000, y: 5.000000}
-      spawnRadius: !<float> 200.000000
-      spawnHeight: !<float> 0.000000
+      spawnRadius: !<float> 500.000000
+      spawnHeight: !<float> -5.000000
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
   ScriptTypes:
     "":
@@ -5127,6 +5227,23 @@
     - !<own> 2f145aeb-3474-4801-9be9-a9e670ea1d99
     - !<own> 11e595bb-7f1c-4c88-8a83-08c31cf823c9
     - !<own> fb8a80a0-d97b-4e5e-96f1-9fa72137c74e
+- !<AudioComponent/7018a1bb-53a4-431f-ba99-bea627a74dd6>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 7b38d9dc-eb0d-4eee-9db8-f9ffe93baa6e
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<Text/711a3126-9574-4184-9e93-c3f5dd94a32b>
   PrefabRemaps:
     []
@@ -5251,11 +5368,15 @@
     []
 - !<SceneObject/73646647-e93b-4e0e-9263-e0ea7d1f5bf5>
   PrefabRemaps:
+    - 195114ec-cc50-4e25-b506-b4c58953c0a7: 9c222a6c-f824-4678-8ff9-870892167459
+    - 29c6808a-344b-4412-902b-8e1cb492e78e: d64bd68f-9812-4018-b2ed-0b98dda156f3
     - 337f66b6-eb8f-4879-bf2d-dadda221316d: b388d806-96cd-416b-839d-71e0f4d582ba
     - 39c8b299-c1b0-41b4-b482-842ac6947b49: c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d
     - 4924e9fc-8fe1-4c10-a78d-b187a920bad8: 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db
+    - 7018a1bb-53a4-431f-ba99-bea627a74dd6: 46c08a8d-f21b-485f-a9bd-f9c9d7010e80
     - 73646647-e93b-4e0e-9263-e0ea7d1f5bf5: 913818d9-5b8c-4036-a273-e94e7abbd71e
     - b4493202-651f-4a99-84f1-712e5936f7b4: db6c52f0-ecdb-401d-95f2-3a56c67d9019
+    - b54703db-7dae-4350-b756-c47188e4e1cb: 477a4b16-2631-43a1-95ae-60de4b2515cc
   Name: EnemyGhost
   Enabled: true
   Layers: 1
@@ -5271,12 +5392,16 @@
     - !<own> b4493202-651f-4a99-84f1-712e5936f7b4
     - !<own> 337f66b6-eb8f-4879-bf2d-dadda221316d
     - !<own> 4924e9fc-8fe1-4c10-a78d-b187a920bad8
+    - !<own> 7018a1bb-53a4-431f-ba99-bea627a74dd6
+    - !<own> b54703db-7dae-4350-b756-c47188e4e1cb
+    - !<own> 29c6808a-344b-4412-902b-8e1cb492e78e
+    - !<own> 195114ec-cc50-4e25-b506-b4c58953c0a7
 - !<RenderMeshVisual/7461700e-3c6d-4e3b-9f72-b9eeea8c974d>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 0
+  RenderOrder: 10
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -7595,6 +7720,23 @@
   ScriptTypes:
     "":
       {}
+- !<AudioComponent/b54703db-7dae-4350-b756-c47188e4e1cb>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 71f5a4ab-50cb-480d-a5c8-1b8340181283
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<SceneObject/b660dca1-2c7a-49f5-b93b-d20fa87a627f>
   PrefabRemaps:
     []
@@ -8873,7 +9015,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 0
+  RenderOrder: 10
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center
@@ -10388,7 +10530,7 @@
     []
   Name: Render Mesh Visual
   Enabled: true
-  RenderOrder: 0
+  RenderOrder: 10
   StretchMode: Stretch
   VerticalAlignment: Center
   HorizontalAlignment: Center

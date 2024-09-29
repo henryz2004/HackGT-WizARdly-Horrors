@@ -16,11 +16,12 @@ export class HUD extends BaseScriptComponent {
 		let width = 18;
 		let maxScore = 10;
 		let currentScore = this.player.getScore() % maxScore;
+		let currentLevel = Math.floor(this.player.getScore() / maxScore);
 
 		let maxHealth = 10;
 		let currentHealth = this.player.getHealth();
 
-		this.scoreText.text = "XP: " + currentScore;
+		this.scoreText.text = "LVL: " + currentLevel;
 		this.xpbar
 			.getTransform()
 			.setLocalScale(new vec3((currentScore / maxScore) * width, 0.4, 0.4));
