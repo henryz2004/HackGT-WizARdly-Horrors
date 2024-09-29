@@ -1,3 +1,6 @@
+const randomInt = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
+
 @component
 export class NewScript extends BaseScriptComponent {
 	@input
@@ -10,13 +13,19 @@ export class NewScript extends BaseScriptComponent {
 	playerObj: SceneObject;
 
 	@input
-	animation: AnimationCurveTrack;
+	animBob: AnimationCurveTrack;
 
+    @input
+    animJuke: AnimationCurveTrack;
+
+    x = randomInt(0,5);
+    z = randomInt(0,5);
 
 	enemy = this.getSceneObject();
 
 
-	frame = 0;
+	frameBob = 0;
+    frameJuke = 0;
 
 	justSpawned = true;
 	jumpscare = false;
@@ -34,8 +43,8 @@ export class NewScript extends BaseScriptComponent {
     }
 
     private move(): void {
-		this.frame += 1;
-		if (this.frame == 31) this.frame = 0;
+		this.frameBob += 1;
+		if (this.frameBob == 31) this.frameBob = 0;
 
 		//Get vector from enemy to player
 		let playerPos: vec3 = this.playerObj.getTransform().getWorldPosition();
@@ -70,7 +79,27 @@ export class NewScript extends BaseScriptComponent {
 				)
 			);
         // bob up and down
-		let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animation.evaluateVec3(this.frame/30).mult(new vec3(0,5,0)));
+		let bobbing = this.enemy.getTransform().getWorldPosition().add(this.animBob.evaluateVec3(this.frameBob/30).mult(new vec3(0,5,0)));
 		this.enemy.getTransform().setWorldPosition(bobbing);
+        
+        this.juke();
+        
 	}
+
+    private juke(): void {
+        this.frameJuke += 1;
+		if (this.frameJuke == 31) {
+            this.frameJuke = 0;
+            this.x = randomInt(-3,3);
+            this.z = randomInt(-3,3);
+        }
+            
+        let juking = this.enemy.getTransform().getWorldPosition().add(this.animJuke.evaluateVec3(this.frameJuke/30).mult(new vec3(this.x,0,this.z)));
+		this.enemy.getTransform().setWorldPosition(juking);
+
+    }
+
+    
 }
+
+

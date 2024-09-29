@@ -54,16 +54,16 @@
   Enabled: true
   ScriptAsset: !<reference> f73388ed-04a8-47a7-a179-75f851e8d287
   ScriptInputsDefault:
-    forwardSpeed: true
-    turnSpeed: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 0.000000
-      turnSpeed: !<float> 0.000000
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      animBob: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      animJuke: !<reference.AnimationCurveTrack> 3e57a1a3-b621-4bbe-a90d-a88e7fd71121
   ScriptTypes:
     "":
       {}

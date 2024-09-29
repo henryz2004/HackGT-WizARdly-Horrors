@@ -24,7 +24,8 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    animation: false
+    animBob: false
+    animJuke: false
     forwardSpeed: false
     playerObj: false
     turnSpeed: false
@@ -32,9 +33,10 @@
     {}
   DefaultScriptInputs:
     - playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      animation: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
       forwardSpeed: !<float> 0.000000
       turnSpeed: !<float> 0.000000
+      animBob: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
+      animJuke: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -42,4 +44,5 @@
     - // @input float forwardSpeed
     - // @input float turnSpeed
     - // @input SceneObject playerObj
-    - // @input Asset.AnimationCurveTrack animation
+    - // @input Asset.AnimationCurveTrack animBob
+    - // @input Asset.AnimationCurveTrack animJuke

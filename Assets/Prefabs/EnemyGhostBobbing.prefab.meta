@@ -14,15 +14,38 @@
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
 - !<ObjectPrefabAssetData/0adc2d4b-5523-4fa8-8118-357243072e63>
   SourceRemaps:
-    - 01b2a74d-7642-4922-b624-79e6c3902ec8: 14b580af-fe65-47a5-940c-a552c3a21bf5
-    - 06febd52-7274-473e-89ad-e445e82830b7: 13a7f383-f94e-4ad5-be57-74fa8fa85587
-    - 133f9acb-5dc6-402e-a02c-5d071beb7c0b: 237fae6a-8dcb-4285-81ee-6992cc326fcf
-    - 8399c8bb-abd1-4eef-a424-5225e2303407: aa11a6a2-60ab-476f-85ad-3090cfa704a8
-    - c6bcefc0-50ce-4592-abce-ee0862a03e33: 24ad359d-99b3-47e9-a84b-266ce48c6ddf
-    - c96777f8-aca5-41cd-96f6-305b295704ff: 363bb58f-d7a4-4b4f-acf8-f5dc7bd252b7
-    - e0fbff6f-f822-4b32-b692-3690e6f35ed8: b374a049-ee63-444e-8e7f-8b00e6cf5eea
-  SourceState: !<own> a06b9e28-c736-4187-9217-9f933d970592
-- !<BodyComponent/13a7f383-f94e-4ad5-be57-74fa8fa85587>
+    - 01b2a74d-7642-4922-b624-79e6c3902ec8: 785da1cd-23ac-4e40-98c0-2a9a79f216a3
+    - 06febd52-7274-473e-89ad-e445e82830b7: 28aded6b-fff8-4bcf-97f0-3a847c6f9a9b
+    - 133f9acb-5dc6-402e-a02c-5d071beb7c0b: 9fd2d66f-27e5-48b9-9254-0a8a63d04bee
+    - 8399c8bb-abd1-4eef-a424-5225e2303407: b741fb84-8284-4122-aaff-a332182eb588
+    - c6bcefc0-50ce-4592-abce-ee0862a03e33: 6fa5ab94-7831-4b33-952c-1d7f0c471f5b
+    - c96777f8-aca5-41cd-96f6-305b295704ff: 6a376087-6a39-40cd-94bd-0bda96aa5942
+    - e0fbff6f-f822-4b32-b692-3690e6f35ed8: 198718a6-806c-412c-b07c-02f42edec54f
+  SourceState: !<own> 2392b8e1-b6a4-4741-b821-dc70d963edb1
+- !<AudioComponent/198718a6-806c-412c-b07c-02f42edec54f>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
+- !<ObjectPrefab/2392b8e1-b6a4-4741-b821-dc70d963edb1>
+  PackagePath: ""
+  objects:
+    - !<own> b741fb84-8284-4122-aaff-a332182eb588
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/28aded6b-fff8-4bcf-97f0-3a847c6f9a9b>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -45,7 +68,42 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/14b580af-fe65-47a5-940c-a552c3a21bf5>
+- !<ScriptComponent/6a376087-6a39-40cd-94bd-0bda96aa5942>
+  PrefabRemaps:
+    []
+  Name: EnemyBehaviour
+  Enabled: true
+  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  ScriptInputsDefault:
+    maxHealth: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      maxHealth: !<float> 0.000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/6fa5ab94-7831-4b33-952c-1d7f0c471f5b>
+  PrefabRemaps:
+    []
+  Name: Visualize Ghost
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 785da1cd-23ac-4e40-98c0-2a9a79f216a3
+    - !<own> 9fd2d66f-27e5-48b9-9254-0a8a63d04bee
+- !<ScriptComponent/785da1cd-23ac-4e40-98c0-2a9a79f216a3>
   PrefabRemaps:
     []
   Name: Generative 3D Component
@@ -65,50 +123,14 @@
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/237fae6a-8dcb-4285-81ee-6992cc326fcf>
+- !<ScriptComponent/9fd2d66f-27e5-48b9-9254-0a8a63d04bee>
   PrefabRemaps:
     []
   Name: BouncingAnim
   Enabled: true
   ScriptAsset: !<reference> f73388ed-04a8-47a7-a179-75f851e8d287
   ScriptInputsDefault:
-    forwardSpeed: true
-    turnSpeed: true
-  ScriptTypesDefault:
     {}
-  ScriptInputs:
-    "":
-      forwardSpeed: !<float> 0.000000
-      turnSpeed: !<float> 0.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-  ScriptTypes:
-    "":
-      {}
-- !<SceneObject/24ad359d-99b3-47e9-a84b-266ce48c6ddf>
-  PrefabRemaps:
-    []
-  Name: Visualize Ghost
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 14b580af-fe65-47a5-940c-a552c3a21bf5
-    - !<own> 237fae6a-8dcb-4285-81ee-6992cc326fcf
-- !<ScriptComponent/363bb58f-d7a4-4b4f-acf8-f5dc7bd252b7>
-  PrefabRemaps:
-    []
-  Name: EnemyBehaviour
-  Enabled: true
-  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
-  ScriptInputsDefault:
-    maxHealth: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -116,17 +138,12 @@
       forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      maxHealth: !<float> 0.000000
+      animBob: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      animJuke: !<reference.AnimationCurveTrack> 3e57a1a3-b621-4bbe-a90d-a88e7fd71121
   ScriptTypes:
     "":
       {}
-- !<ObjectPrefab/a06b9e28-c736-4187-9217-9f933d970592>
-  PackagePath: ""
-  objects:
-    - !<own> aa11a6a2-60ab-476f-85ad-3090cfa704a8
-  LazyLoading: false
-  RetainAssets: true
-- !<SceneObject/aa11a6a2-60ab-476f-85ad-3090cfa704a8>
+- !<SceneObject/b741fb84-8284-4122-aaff-a332182eb588>
   PrefabRemaps:
     []
   Name: EnemyGhost Physics
@@ -138,25 +155,8 @@
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
-    - !<own> 24ad359d-99b3-47e9-a84b-266ce48c6ddf
+    - !<own> 6fa5ab94-7831-4b33-952c-1d7f0c471f5b
   Components:
-    - !<own> 363bb58f-d7a4-4b4f-acf8-f5dc7bd252b7
-    - !<own> 13a7f383-f94e-4ad5-be57-74fa8fa85587
-    - !<own> b374a049-ee63-444e-8e7f-8b00e6cf5eea
-- !<AudioComponent/b374a049-ee63-444e-8e7f-8b00e6cf5eea>
-  PrefabRemaps:
-    []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
+    - !<own> 6a376087-6a39-40cd-94bd-0bda96aa5942
+    - !<own> 28aded6b-fff8-4bcf-97f0-3a847c6f9a9b
+    - !<own> 198718a6-806c-412c-b07c-02f42edec54f

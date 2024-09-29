@@ -12,7 +12,7 @@
   ImporterSettings: !<AssetImporterSettings/308140fe-2a4b-4725-afec-8d3acaa9372b>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ScriptComponent/37dab768-f37c-4f7a-80e4-00a4258b639d>
+- !<ScriptComponent/1440a47d-076b-40f5-899f-07fdf40763fd>
   PrefabRemaps:
     []
   Name: ProjectileDamage
@@ -30,12 +30,12 @@
       {}
 - !<ObjectPrefabAssetData/43951129-edeb-40af-ba2a-1bf6aef9a818>
   SourceRemaps:
-    - 05355764-37f5-47be-8a88-040a1d31f818: bea4a337-6110-4c0d-9332-71cf1417fc46
-    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: 67aaeec5-2348-4c56-955e-11798d902f29
-    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 37dab768-f37c-4f7a-80e4-00a4258b639d
-    - dfaf2618-3054-4cd1-ba4d-076696e901b6: d5fba621-a9f3-4eaf-9404-0feb51c087a0
-  SourceState: !<own> c54e10c2-5e80-4265-8a78-d40b78a7e761
-- !<RenderMeshVisual/67aaeec5-2348-4c56-955e-11798d902f29>
+    - 05355764-37f5-47be-8a88-040a1d31f818: b34c2c28-5c73-4227-9109-ef27c2173727
+    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: 63ab4894-d542-4266-9ab7-e431a8818f2a
+    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 1440a47d-076b-40f5-899f-07fdf40763fd
+    - dfaf2618-3054-4cd1-ba4d-076696e901b6: bf9dfcff-87a1-48bf-882b-7a141f2853c8
+  SourceState: !<own> c62e2306-2e3b-406f-b06c-588d7de37043
+- !<RenderMeshVisual/63ab4894-d542-4266-9ab7-e431a8818f2a>
   PrefabRemaps:
     []
   Name: Render Mesh Visual
@@ -45,17 +45,17 @@
   VerticalAlignment: Center
   HorizontalAlignment: Center
   MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowColor: {x: 0.405737, y: 0.084337, z: 0.157305, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
+    - !<reference> e56a7b0e-b668-48dc-8902-3d1837c78da0
   Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
-- !<BodyComponent/bea4a337-6110-4c0d-9332-71cf1417fc46>
+- !<BodyComponent/b34c2c28-5c73-4227-9109-ef27c2173727>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -78,13 +78,7 @@
   BodySettingValue: 16.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ObjectPrefab/c54e10c2-5e80-4265-8a78-d40b78a7e761>
-  PackagePath: ""
-  objects:
-    - !<own> d5fba621-a9f3-4eaf-9404-0feb51c087a0
-  LazyLoading: false
-  RetainAssets: true
-- !<SceneObject/d5fba621-a9f3-4eaf-9404-0feb51c087a0>
+- !<SceneObject/bf9dfcff-87a1-48bf-882b-7a141f2853c8>
   PrefabRemaps:
     []
   Name: Projectile
@@ -98,6 +92,12 @@
   Children:
     []
   Components:
-    - !<own> 67aaeec5-2348-4c56-955e-11798d902f29
-    - !<own> 37dab768-f37c-4f7a-80e4-00a4258b639d
-    - !<own> bea4a337-6110-4c0d-9332-71cf1417fc46
+    - !<own> 63ab4894-d542-4266-9ab7-e431a8818f2a
+    - !<own> 1440a47d-076b-40f5-899f-07fdf40763fd
+    - !<own> b34c2c28-5c73-4227-9109-ef27c2173727
+- !<ObjectPrefab/c62e2306-2e3b-406f-b06c-588d7de37043>
+  PackagePath: ""
+  objects:
+    - !<own> bf9dfcff-87a1-48bf-882b-7a141f2853c8
+  LazyLoading: false
+  RetainAssets: true
