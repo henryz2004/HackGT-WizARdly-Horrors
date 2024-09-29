@@ -32,7 +32,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
             return
         }
         if(this.justSpawned == true) {
-            this.spawn()
+            // this.spawn()
             print("spawn scale")
         } else {
             this.move()
