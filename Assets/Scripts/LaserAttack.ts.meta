@@ -24,22 +24,19 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    attack_cooldown: false
-    launch_velocity: false
-    projectile_container: false
-    projectile_obj: false
+    cylinderRef: false
+    originObj: false
+    targetObj: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - attack_cooldown: !<float> 1.000000
-      projectile_obj: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      launch_velocity: !<float> 0.000000
-      projectile_container: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    - cylinderRef: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      originObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      targetObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input float attack_cooldown = 1.0
-    - // @input Asset.ObjectPrefab projectile_obj
-    - // @input float launch_velocity
-    - // @input SceneObject projectile_container
+    - // @input SceneObject cylinderRef
+    - // @input SceneObject originObj
+    - // @input SceneObject targetObj
