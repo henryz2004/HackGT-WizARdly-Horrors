@@ -1195,9 +1195,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    5/5
-
+  Text: " "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1967,7 +1965,7 @@
   PrefabRemaps:
     []
   Name: Text3D
-  Enabled: false
+  Enabled: true
   RenderOrder: 5
   StretchMode: Stretch
   VerticalAlignment: Top
@@ -1977,7 +1975,7 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 2b4960e6-cba3-4edf-89ff-eaa2bbfc09ed
-  Text: " "
+  Text: "  "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000

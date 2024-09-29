@@ -56,7 +56,9 @@ export class PlayerAttacks extends BaseScriptComponent {
         //let test: vec3 = new vec3(0,10000,0)
         
         
-        rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
+        let dir : vec3 = targetArgs.rayDirectionInWorld
+        dir.y = dir.y * 0.5;
+        rb.addForce(dir.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
         
         
         //rb.addForce(new vec3(0,1,-300), Physics.ForceMode.VelocityChange)
