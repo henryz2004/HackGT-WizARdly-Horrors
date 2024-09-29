@@ -80,6 +80,16 @@ export class EnemyBehaviour extends BaseScriptComponent {
         //go to new position
 
         let newPos = currPos.add(this.enemy.getTransform().forward.uniformScale(this.forwardSpeed * getDeltaTime()))
+        let randomChoose = Math.floor(Math.random() * 4)
+        if (randomChoose == 0) {
+            newPos = newPos.add(this.enemy.getTransform().left.uniformScale(this.forwardSpeed * getDeltaTime() * 2))
+        } else if (randomChoose == 1) {
+            newPos = newPos.add(this.enemy.getTransform().left.uniformScale(this.forwardSpeed * getDeltaTime() * 8))
+        } else if (randomChoose == 2) {
+            newPos = newPos.add(this.enemy.getTransform().right.uniformScale(this.forwardSpeed * getDeltaTime() * 2))
+        } else { //3
+            newPos = newPos.add(this.enemy.getTransform().left.uniformScale(this.forwardSpeed * getDeltaTime() * 8))
+        } 
 
         this.enemy.getTransform().setWorldPosition(newPos)
 
