@@ -12,49 +12,55 @@
   ImporterSettings: !<AssetImporterSettings/cdfed3cc-97ca-4be9-8393-70c4eaa92a34>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/1075473b-f8ba-493e-b27f-e4edb5bf70b5>
-  PackagePath: ""
-  objects:
-    - !<own> 41598102-83eb-45ad-8e15-0f62e4865e2a
-  LazyLoading: false
-  RetainAssets: true
-- !<SceneObject/41598102-83eb-45ad-8e15-0f62e4865e2a>
-  PrefabRemaps:
-    []
-  Name: MainEnemy
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> e84b6a33-7e2b-4fe5-9008-0bfac0917e9b
-    - !<own> 8bae3f63-cda1-427e-b339-8044619bb0eb
-- !<ScriptComponent/8bae3f63-cda1-427e-b339-8044619bb0eb>
+- !<ScriptComponent/4ab67982-d7a4-4607-96d3-6a3b958a3bf1>
   PrefabRemaps:
     []
   Name: EnemyBehaviour
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    forwardSpeed: true
-    turnSpeed: true
-    playerObj: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 0.000000
-      turnSpeed: !<float> 0.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      forwardSpeed: !<float> 30.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
   ScriptTypes:
     "":
       {}
-- !<ScriptComponent/e84b6a33-7e2b-4fe5-9008-0bfac0917e9b>
+- !<ObjectPrefab/4fa704bf-ca11-479b-b54c-1e860406b00b>
+  PackagePath: ""
+  objects:
+    - !<own> 9cc46531-b041-4156-b2f0-37e6bbc7b92e
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/667608fd-d99e-4dbc-8972-7f74eb4f1924>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<ScriptComponent/8bae3f63-cda1-427e-b339-8044619bb0eb> ~
+- !<ScriptComponent/966c3cf9-83be-41bd-94ea-7d103b284409>
   PrefabRemaps:
     []
   Name: Generative 3D Component
@@ -74,9 +80,27 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/9cc46531-b041-4156-b2f0-37e6bbc7b92e>
+  PrefabRemaps:
+    []
+  Name: MainEnemy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 966c3cf9-83be-41bd-94ea-7d103b284409
+    - !<own> 4ab67982-d7a4-4607-96d3-6a3b958a3bf1
+    - !<own> 667608fd-d99e-4dbc-8972-7f74eb4f1924
 - !<ObjectPrefabAssetData/f1815c4b-c8ac-4ac6-9746-9c628b34e0dc>
   SourceRemaps:
-    - 05ebaa53-4aab-4749-b6cc-8605b0033b8d: e84b6a33-7e2b-4fe5-9008-0bfac0917e9b
-    - 7a14bb16-da32-4bd3-b215-d8b61f26f010: 8bae3f63-cda1-427e-b339-8044619bb0eb
-    - bf4c18f1-6dcf-494d-9f7a-726fe20318c7: 41598102-83eb-45ad-8e15-0f62e4865e2a
-  SourceState: !<own> 1075473b-f8ba-493e-b27f-e4edb5bf70b5
+    - 05ebaa53-4aab-4749-b6cc-8605b0033b8d: 966c3cf9-83be-41bd-94ea-7d103b284409
+    - 7a14bb16-da32-4bd3-b215-d8b61f26f010: 4ab67982-d7a4-4607-96d3-6a3b958a3bf1
+    - b345bb74-b45c-4d6e-9a3d-c8b904ecccad: 667608fd-d99e-4dbc-8972-7f74eb4f1924
+    - bf4c18f1-6dcf-494d-9f7a-726fe20318c7: 9cc46531-b041-4156-b2f0-37e6bbc7b92e
+  SourceState: !<own> 4fa704bf-ca11-479b-b54c-1e860406b00b

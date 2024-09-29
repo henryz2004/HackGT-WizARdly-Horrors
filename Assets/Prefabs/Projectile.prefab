@@ -4,6 +4,29 @@
     - !<own> dfaf2618-3054-4cd1-ba4d-076696e901b6
   LazyLoading: false
   RetainAssets: true
+- !<BodyComponent/05355764-37f5-47be-8a88-040a1d31f818>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> ddd48825-3c1d-4bdd-b2ac-f2bed06e1a79
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 70d522d8-d109-4c9f-b625-b5aa379929b7
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Mass
+  BodySettingValue: 16.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
 - !<RenderMeshVisual/11316f5b-da66-4950-8c2d-3a5c5af19f2f>
   PrefabRemaps:
     []
@@ -56,3 +79,4 @@
   Components:
     - !<own> 11316f5b-da66-4950-8c2d-3a5c5af19f2f
     - !<own> 1f68e5e5-c56b-49bd-a953-797b12a8263b
+    - !<own> 05355764-37f5-47be-8a88-040a1d31f818
