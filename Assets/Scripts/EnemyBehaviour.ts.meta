@@ -37,4 +37,6 @@
     -
       {}
   InputLines:
-    []
+    - // @input float forwardSpeed
+    - // @input float turnSpeed
+    - // @input SceneObject playerObj
