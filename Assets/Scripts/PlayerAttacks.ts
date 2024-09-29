@@ -29,21 +29,21 @@ export class PlayerAttacks extends BaseScriptComponent {
         .add((targetArgs: TargetingDataArgs) => {
 
         
-        if(this.attack_timer > 0 || !targetArgs.isValid){
-            //print('ON COOLDOWN')
+        if(this.attack_timer > 0){
+            print('ON COOLDOWN')
             
             return
         }
 
         this.attack_timer = this.attack_cooldown;
-        //print('SHOT FIRED')
+        print('SHOT FIRED')
 
 
         let curr_proj = this.projectile_obj.instantiate(this.projectile_container)
         this.projectile_list.push(curr_proj)
         print("PROJECTILE LIST LENGTH: " + this.projectile_list.length)
         curr_proj.getTransform().setWorldPosition(targetArgs.rayOriginInWorld)
-        
+        //curr_proj.getTransform().setWorldPosition(new vec3(0,0,-300))
 
         let rb = curr_proj.getComponent('Physics.BodyComponent');
 
@@ -58,7 +58,7 @@ export class PlayerAttacks extends BaseScriptComponent {
         rb.addForce(targetArgs.rayDirectionInWorld.normalize().uniformScale(this.launch_velocity), Physics.ForceMode.VelocityChange)
         
         
-        //rb.addForce(new vec3(0,1000,0), Physics.ForceMode.Impulse)
+        //rb.addForce(new vec3(0,1,-300), Physics.ForceMode.VelocityChange)
         //rb.velocity = test
 
         
