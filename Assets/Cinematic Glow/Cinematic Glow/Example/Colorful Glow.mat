@@ -1,0 +1,53 @@
+- !<Material/d464b0bb-256f-412f-953c-f8c92bf95b07>
+  PackagePath: Cinematic Glow/Example/Colorful Glow
+  PassesInfo:
+    - !<own> b51edb7b-341f-4307-ade2-9eb1c720b437
+- !<PassInfo/b51edb7b-341f-4307-ade2-9eb1c720b437>
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Disabled
+  Properties:
+    Port_Import_N025:
+      typeIdx: 1
+      value: 0.700000
+    Port_Import_N026:
+      typeIdx: 1
+      value: 1.500000
+    Port_Multiplier_N006:
+      typeIdx: 1
+      value: 2.000000
+    Port_Offset_N000:
+      typeIdx: 1
+      value: 0.000000
+    Port_Scale_N000:
+      typeIdx: 3
+      value: {x: 0.200000, y: 0.000000}
+    Port_Value3_N003:
+      typeIdx: 1
+      value: 1.000000
+    Port_Value_N013:
+      typeIdx: 1
+      value: 1.000000
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    overrideTimeDelta:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> a6234713-4bcb-407e-a6ff-7f979ef26ffe

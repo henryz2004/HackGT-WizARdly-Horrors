@@ -1,9 +1,8 @@
-- !<Material/df64425b-2200-4b61-b4b9-2af23e229c6d>
-  PackagePath: ""
+- !<Material/b7bef445-5284-4975-9deb-ae76eaf3631f>
+  PackagePath: .hidden/UberDiffuse.lsmat
   PassesInfo:
-    - !<own> e822a3d0-553e-40d4-8382-0ec35b675d77
-    - !<own> f050d350-3912-458d-80d9-b2dd0f8889e0
-- !<PassInfo/e822a3d0-553e-40d4-8382-0ec35b675d77>
+    - !<own> 5b07f795-1be3-417e-9ec1-9c81bdc009e2
+- !<PassInfo/5b07f795-1be3-417e-9ec1-9c81bdc009e2>
   DepthWrite: true
   DepthTest: true
   DepthFunction: LessEqual
@@ -17,34 +16,55 @@
   Defines:
     - ENABLE_BASE_TEX
     - ENABLE_NORMALMAP
-    - ENABLE_LIGHTING
+    - NODE_13_DROPLIST_ITEM 0
+    - NODE_181_DROPLIST_ITEM 0
+    - NODE_184_DROPLIST_ITEM 0
+    - NODE_27_DROPLIST_ITEM 0
+    - NODE_38_DROPLIST_ITEM 0
+    - NODE_49_DROPLIST_ITEM 0
+    - NODE_69_DROPLIST_ITEM 0
   BlendMode: Disabled
   Properties:
-    Port_Center_N016:
-      typeIdx: 3
-      value: {x: 0.000000, y: 0.000000}
-    Port_Emissive_N006:
+    Port_AO_N036:
+      typeIdx: 4
+      value: {x: 1.000000, y: 0.999969, z: 0.999985}
+    Port_Default_N113:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    Port_Default_N204:
+      typeIdx: 1
+      value: 1.000000
+    Port_Default_N369:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Emissive_N036:
       typeIdx: 4
       value: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Port_SpecularAO_N006:
-      typeIdx: 4
-      value: {x: 1.000000, y: 1.000000, z: 1.000000}
-    Port_Value_N003:
-      typeIdx: 5
-      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    Port_Input2_N072:
+      typeIdx: 1
+      value: 1.000000
+    Port_Strength1_N200:
+      typeIdx: 1
+      value: 1.000000
+    Port_Strength2_N200:
+      typeIdx: 1
+      value: 1.000000
     PreviewEnabled:
       typeIdx: 0
       value: 0
+    baseColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 0.999969, z: 0.999985, w: 1.000000}
     baseTex:
       typeIdx: 9
       value:
-        id: b7fd20cb-e5a0-4724-ac41-28bfbb92e60c
+        id: 16d5b499-d227-4491-870e-ab30386f8352
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
           wrapModeW: Repeat
-          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     baseTexBorderColor:
@@ -65,13 +85,13 @@
     normalTex:
       typeIdx: 9
       value:
-        id: fb79f471-9320-4f83-a6dc-8d6b26627618
+        id: 8d504766-217d-4a37-ba9b-3e0d2d9d7d28
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
           wrapModeV: Repeat
           wrapModeW: Repeat
-          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
           mipmaps: false
         type: Texture2D
     normalTexBorderColor:
@@ -89,24 +109,13 @@
     normalTexUvMinMax:
       typeIdx: 5
       value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-    uvScale:
+    overrideTimeDelta:
       typeIdx: 1
-      value: 1.000000
-  Pass: !<reference> 49154af5-345f-489a-a2d8-08a88be38f65
-- !<PassInfo/f050d350-3912-458d-80d9-b2dd0f8889e0>
-  DepthWrite: true
-  DepthTest: true
-  DepthFunction: LessEqual
-  TwoSided: false
-  ColorMask: {x: true, y: true, z: true, w: true}
-  CullMode: Back
-  PolygonOffset: {x: 0.000000, y: 0.000000}
-  FrustumCulling: Auto
-  FrustumCullPad: 0.000000
-  InstanceCount: 1
-  Defines:
-    []
-  BlendMode: Disabled
-  Properties:
-    {}
-  Pass: !<reference> 00000000-0000-0000-0000-000000000000
+      value: 0.000000
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 94f1470d-aec1-49a9-99fb-2a6ffa6bb073

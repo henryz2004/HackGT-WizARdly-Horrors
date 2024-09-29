@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/3cae8dae-8ba9-44c7-bd10-a14c3d904b3e>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> b02edca4-2cc0-4299-897f-9bb465e4f121
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> b02edca4-2cc0-4299-897f-9bb465e4f121
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    JavaScriptAsset: !<own> c2f5adcf-5f12-490a-80ec-7483cd632fa2
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/d864a9d0-f9ee-4c9b-ba85-620bca54316c>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/c2f5adcf-5f12-490a-80ec-7483cd632fa2>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cinematicGlowRenderer: false
+    compositeTarget: false
+    customRenderOrder: false
+    doNotGlow: false
+    glowExample: false
+    glowMatteTarget: false
+    glowOccluder: false
+    glowRenderOrder: false
+    mainCamera: false
+    showHidden: false
+    warnPostEffects: false
+  ScriptTypesHidden:
+    {}
+  DefaultScriptInputs:
+    - doNotGlow: false
+      compositeTarget: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      mainCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      warnPostEffects: true
+      showHidden: false
+      glowMatteTarget: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cinematicGlowRenderer: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowOccluder: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowExample: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      customRenderOrder: false
+      glowRenderOrder: -100
+  ScriptTypes:
+    -
+      {}

@@ -1,0 +1,29 @@
+- !<Material/7e49b3bc-a699-43ce-b0f2-f4bdbd3d8f99>
+  PackagePath: Cinematic Glow/Extra/Glow Example
+  PassesInfo:
+    - !<own> bb04abec-dc95-4cec-9cae-bd25d19cb197
+- !<PassInfo/bb04abec-dc95-4cec-9cae-bd25d19cb197>
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Disabled
+  Properties:
+    Port_FinalColor_N004:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Port_Value_N000:
+      typeIdx: 5
+      value: {x: 0.360006, y: 0.200000, z: 1.000000, w: 1.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+  Pass: !<reference> 41cb5f70-0424-4285-ae66-d7e95b284dc6

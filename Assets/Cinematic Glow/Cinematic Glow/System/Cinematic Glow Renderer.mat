@@ -1,0 +1,203 @@
+- !<Material/02cef3bc-94f2-48d1-9e78-142bd49f70b3>
+  PackagePath: Cinematic Glow/System/Cinematic Glow Renderer
+  PassesInfo:
+    - !<own> 40fd6a48-77ec-47f5-8920-3cbaa2ffcf4e
+- !<PassInfo/40fd6a48-77ec-47f5-8920-3cbaa2ffcf4e>
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    []
+  BlendMode: Add
+  Properties:
+    Port_Default_N061:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Port_Input1_N003:
+      typeIdx: 1
+      value: 2.000000
+    Port_Input1_N006:
+      typeIdx: 1
+      value: 3.000000
+    Port_Input1_N014:
+      typeIdx: 1
+      value: 0.700000
+    Port_Input1_N020:
+      typeIdx: 1
+      value: 8.000000
+    Port_Input1_N029:
+      typeIdx: 1
+      value: 1.700000
+    Port_Input1_N036:
+      typeIdx: 1
+      value: 0.700000
+    Port_Input1_N041:
+      typeIdx: 1
+      value: 8.000000
+    Port_Input1_N045:
+      typeIdx: 1
+      value: 0.700000
+    Port_Input1_N060:
+      typeIdx: 1
+      value: 2.500000
+    Port_Input1_N062:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N086:
+      typeIdx: 1
+      value: 8.000000
+    Port_Input2_N026:
+      typeIdx: 1
+      value: 0.840000
+    Port_Input2_N052:
+      typeIdx: 1
+      value: 0.840000
+    Port_Input2_N105:
+      typeIdx: 1
+      value: 0.840000
+    Port_Item0_N021:
+      typeIdx: 3
+      value: {x: 1.016200, y: 0.420900}
+    Port_Item0_N043:
+      typeIdx: 3
+      value: {x: 1.016200, y: 0.420900}
+    Port_Item0_N084:
+      typeIdx: 3
+      value: {x: 1.016200, y: 0.420900}
+    Port_Item1_N021:
+      typeIdx: 3
+      value: {x: 0.420900, y: 1.016200}
+    Port_Item1_N043:
+      typeIdx: 3
+      value: {x: 0.420900, y: 1.016200}
+    Port_Item1_N084:
+      typeIdx: 3
+      value: {x: 0.420900, y: 1.016200}
+    Port_Item2_N021:
+      typeIdx: 3
+      value: {x: -0.420900, y: 1.016200}
+    Port_Item2_N043:
+      typeIdx: 3
+      value: {x: -0.420900, y: 1.016200}
+    Port_Item2_N084:
+      typeIdx: 3
+      value: {x: -0.420900, y: 1.016200}
+    Port_Item3_N021:
+      typeIdx: 3
+      value: {x: -1.016200, y: 0.420900}
+    Port_Item3_N043:
+      typeIdx: 3
+      value: {x: -1.016200, y: 0.420900}
+    Port_Item3_N084:
+      typeIdx: 3
+      value: {x: -1.016200, y: 0.420900}
+    Port_Item4_N021:
+      typeIdx: 3
+      value: {x: -1.016200, y: -0.420900}
+    Port_Item4_N043:
+      typeIdx: 3
+      value: {x: -1.016200, y: -0.420900}
+    Port_Item4_N084:
+      typeIdx: 3
+      value: {x: -1.016200, y: -0.420900}
+    Port_Item5_N021:
+      typeIdx: 3
+      value: {x: -0.420900, y: -1.016200}
+    Port_Item5_N043:
+      typeIdx: 3
+      value: {x: -0.420900, y: -1.016200}
+    Port_Item5_N084:
+      typeIdx: 3
+      value: {x: -0.420900, y: -1.016200}
+    Port_Item6_N021:
+      typeIdx: 3
+      value: {x: 0.420900, y: -1.016200}
+    Port_Item6_N043:
+      typeIdx: 3
+      value: {x: 0.420900, y: -1.016200}
+    Port_Item6_N084:
+      typeIdx: 3
+      value: {x: 0.420900, y: -1.016200}
+    Port_Item7_N021:
+      typeIdx: 3
+      value: {x: 1.016200, y: -0.420900}
+    Port_Item7_N043:
+      typeIdx: 3
+      value: {x: 1.016200, y: -0.420900}
+    Port_Item7_N084:
+      typeIdx: 3
+      value: {x: 1.016200, y: -0.420900}
+    Port_LODValue_N063:
+      typeIdx: 1
+      value: 8.000000
+    Port_RandomSeed_N059:
+      typeIdx: 5
+      value: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+    Port_Scale_N059:
+      typeIdx: 3
+      value: {x: 3.000000, y: 3.000000}
+    Port_Value1_N061:
+      typeIdx: 4
+      value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    blurSize:
+      typeIdx: 1
+      value: 2.250000
+    glowTexture:
+      typeIdx: 9
+      value:
+        id: 4b604994-acc9-4b42-9caa-989e880c87a9
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: MirroredRepeat
+          wrapModeV: MirroredRepeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: true
+        type: Texture2D
+    glowTextureBorderColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    glowTextureDims:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    glowTextureSize:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    glowTextureTransform:
+      typeIdx: 7
+      value:
+        0: {x: 1.000000, y: 0.000000, z: 0.000000}
+        1: {x: 0.000000, y: 1.000000, z: 0.000000}
+        2: {x: 0.000000, y: 0.000000, z: 1.000000}
+    glowTextureUvMinMax:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    haze:
+      typeIdx: 1
+      value: 1.000000
+    luminance:
+      typeIdx: 1
+      value: 1.000000
+    overrideTimeDelta:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
+    ratio:
+      typeIdx: 3
+      value: {x: 1.000000, y: 1.000000}
+  Pass: !<reference> 30c9216c-055e-4c95-8245-5bf62c6a2df8

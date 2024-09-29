@@ -1,0 +1,13 @@
+- !<RenderTarget/4b604994-acc9-4b42-9caa-989e880c87a9>
+  PackagePath: Cinematic Glow/System/Glow Matte Target
+  UseScreenResolution: true
+  Resolution:
+    x: 720
+    y: 1280
+  AntialiasingMode: Disabled
+  AntialiasingQuality: Ultra
+  MSAAStrategy: OnlyWhenRequired
+  ClearColorOption: CustomColor
+  ClearColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+  InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  DepthBuffer: Auto
