@@ -14,30 +14,13 @@
   Volume: 1.000000
   EnableMixToSnap: false
   RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
   CurveType: Logarithm
   MinDistance: 0.000000
   MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
-- !<AudioComponent/477a4b16-2631-43a1-95ae-60de4b2515cc>
-  PrefabRemaps:
-    []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 71f5a4ab-50cb-480d-a5c8-1b8340181283
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
 - !<AudioComponent/59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db>
   PrefabRemaps:
     []
@@ -48,13 +31,13 @@
   Volume: 0.700000
   EnableMixToSnap: false
   RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
   CurveType: Logarithm
   MinDistance: 0.000000
   MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
 - !<SceneObject/913818d9-5b8c-4036-a273-e94e7abbd71e>
   PrefabRemaps:
     []
@@ -74,7 +57,6 @@
     - !<own> b388d806-96cd-416b-839d-71e0f4d582ba
     - !<own> 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db
     - !<own> 46c08a8d-f21b-485f-a9bd-f9c9d7010e80
-    - !<own> 477a4b16-2631-43a1-95ae-60de4b2515cc
     - !<own> d64bd68f-9812-4018-b2ed-0b98dda156f3
     - !<own> 9c222a6c-f824-4678-8ff9-870892167459
 - !<Text/9c222a6c-f824-4678-8ff9-870892167459>
@@ -89,9 +71,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    5/5
-
+  Text: " "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -189,7 +169,7 @@
   PrefabRemaps:
     []
   Name: Text3D
-  Enabled: false
+  Enabled: true
   RenderOrder: 5
   StretchMode: Stretch
   VerticalAlignment: Top
@@ -199,7 +179,7 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 2b4960e6-cba3-4edf-89ff-eaa2bbfc09ed
-  Text: " "
+  Text: "  "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -236,6 +216,8 @@
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      damageRange: !<float> 6.000000
+      damage: !<float> 1.000000
       maxHealth: !<float> 10.000000
   ScriptTypes:
     "":

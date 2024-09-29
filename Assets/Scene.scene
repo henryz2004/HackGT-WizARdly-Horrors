@@ -3208,13 +3208,13 @@
   Volume: 0.700000
   EnableMixToSnap: false
   RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
   CurveType: Logarithm
   MinDistance: 0.000000
   MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
 - !<Canvas/492f9ebd-7a97-492f-826b-a7baab07368f>
   PrefabRemaps:
     []
@@ -5235,13 +5235,13 @@
   Volume: 1.000000
   EnableMixToSnap: false
   RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
   CurveType: Logarithm
   MinDistance: 0.000000
   MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
 - !<Text/711a3126-9574-4184-9e93-c3f5dd94a32b>
   PrefabRemaps:
     []
@@ -5391,7 +5391,6 @@
     - !<own> 337f66b6-eb8f-4879-bf2d-dadda221316d
     - !<own> 4924e9fc-8fe1-4c10-a78d-b187a920bad8
     - !<own> 7018a1bb-53a4-431f-ba99-bea627a74dd6
-    - !<own> b54703db-7dae-4350-b756-c47188e4e1cb
     - !<own> 29c6808a-344b-4412-902b-8e1cb492e78e
     - !<own> 195114ec-cc50-4e25-b506-b4c58953c0a7
 - !<RenderMeshVisual/7461700e-3c6d-4e3b-9f72-b9eeea8c974d>
@@ -7644,6 +7643,8 @@
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
       animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      damageRange: !<float> 6.000000
+      damage: !<float> 1.000000
       maxHealth: !<float> 10.000000
   ScriptTypes:
     "":
@@ -7718,23 +7719,6 @@
   ScriptTypes:
     "":
       {}
-- !<AudioComponent/b54703db-7dae-4350-b756-c47188e4e1cb>
-  PrefabRemaps:
-    []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 71f5a4ab-50cb-480d-a5c8-1b8340181283
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
 - !<SceneObject/b660dca1-2c7a-49f5-b93b-d20fa87a627f>
   PrefabRemaps:
     []

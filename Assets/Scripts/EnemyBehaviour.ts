@@ -14,6 +14,12 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	@input
 	animation: AnimationCurveTrack;
 
+    @input
+    damageRange: number;
+
+    @input
+    damage: number;
+
 	@input maxHealth: number;
 	health: number;
 	enemy = this.getSceneObject();
@@ -44,9 +50,8 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	}
 
 	private kill(): void {
-		this.player.setScore(this.player.getScore() + 1);
+		this.player.addScore(1);
 		if (this.getSceneObject()) {
-            this.sounds[2].play(0);
 			this.getSceneObject().destroy();
 		}
 	}
@@ -62,7 +67,19 @@ export class EnemyBehaviour extends BaseScriptComponent {
 			this.move();
 			// print("movement")
 		}
+
+        this.pollPlayer()
 	}
+
+    private pollPlayer(): void {
+        let playerPos: vec3 = this.playerObj.getTransform().getWorldPosition();
+        let currPos: vec3 = this.enemy.getTransform().getWorldPosition();
+        let dist = playerPos.distance(currPos);
+        if (dist < this.damageRange) {
+            this.player.takeDamage( this.damage);
+            this.kill();
+        }
+    }
 
 	private lose(): void {
 		// jumpscare lol

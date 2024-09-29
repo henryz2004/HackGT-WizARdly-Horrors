@@ -12,67 +12,53 @@
   ImporterSettings: !<AssetImporterSettings/29cb55df-f53e-45db-afe3-09266355dbfe>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<AudioComponent/1216362a-97ff-42a7-8881-db41850b9859>
+- !<ScriptComponent/1c0e4b9f-9acd-41cf-99f7-c1c11ce66993>
   PrefabRemaps:
     []
-  Name: Audio
+  Name: Generative 3D Component
   Enabled: true
-  AudioTrack: !<reference> 71f5a4ab-50cb-480d-a5c8-1b8340181283
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
-- !<AudioComponent/1a8067f0-5744-4606-a0d7-42a23822fecf>
+  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
+  ScriptInputsDefault:
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
+  ScriptTypes:
+    "":
+      {}
+- !<ScriptComponent/27a230b4-8e46-4948-b2f7-2213a263ed75>
   PrefabRemaps:
     []
-  Name: Audio
+  Name: EnemyBehaviour
   Enabled: true
-  AudioTrack: !<reference> 7b38d9dc-eb0d-4eee-9db8-f9ffe93baa6e
-  EnableAutoplayLoop: false
-  Volume: 1.000000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
-- !<SceneObject/3224db42-8693-4ae8-b402-3a28abb833b9>
-  PrefabRemaps:
-    []
-  Name: EnemyGhost
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -200.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 715b679a-a1e5-4569-84d6-a73086cbb5fa
-    - !<own> b4241df8-3490-4c9b-b4e0-43fbb61fe2a6
-    - !<own> d7bb227e-3172-45c9-ae2a-78534abc3ea3
-    - !<own> 8a4fcc20-78b4-4ff0-8c58-538ef6385883
-    - !<own> 1a8067f0-5744-4606-a0d7-42a23822fecf
-    - !<own> 1216362a-97ff-42a7-8881-db41850b9859
-    - !<own> 37f0b661-cf47-4ca8-ae9f-6044e400792c
-    - !<own> fd58a23a-d536-4e4b-85ec-de9271edb9d0
-- !<Text3D/37f0b661-cf47-4ca8-ae9f-6044e400792c>
+  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      forwardSpeed: !<float> 20.000000
+      turnSpeed: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
+      damageRange: !<float> 6.000000
+      damage: !<float> 1.000000
+      maxHealth: !<float> 10.000000
+  ScriptTypes:
+    "":
+      {}
+- !<Text3D/511133b2-2ec0-4812-b00e-1efe9257d6ed>
   PrefabRemaps:
     []
   Name: Text3D
-  Enabled: false
+  Enabled: true
   RenderOrder: 5
   StretchMode: Stretch
   VerticalAlignment: Top
@@ -82,7 +68,7 @@
   ShadowDensity: 1.000000
   Materials:
     - !<reference> 2b4960e6-cba3-4edf-89ff-eaa2bbfc09ed
-  Text: " "
+  Text: "  "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -103,82 +89,28 @@
     LetterSpacing: 0.000000
     LineSpacing: 1.000000
     CapitalizationOverride: None
-- !<ObjectPrefab/68606d94-b6f9-4f2e-a59b-24762965ba5f>
-  PackagePath: ""
-  objects:
-    - !<own> 3224db42-8693-4ae8-b402-3a28abb833b9
-  LazyLoading: false
-  RetainAssets: false
-- !<ScriptComponent/715b679a-a1e5-4569-84d6-a73086cbb5fa>
+- !<SceneObject/8cc4b533-247a-4f01-99e9-0d774d4b2e8a>
   PrefabRemaps:
     []
-  Name: Generative 3D Component
+  Name: EnemyGhost
   Enabled: true
-  ScriptAsset: !<reference> 49a47ae3-61c5-4637-aab7-f810a9a87e77
-  ScriptInputsDefault:
-    renderOrder: true
-    useShadow: true
-    shadowDensity: true
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      renderOrder: 0
-      useShadow: true
-      shadowDensity: !<float> 1.000000
-  ScriptTypes:
-    "":
-      {}
-- !<AudioComponent/8a4fcc20-78b4-4ff0-8c58-538ef6385883>
-  PrefabRemaps:
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -200.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
     []
-  Name: Audio
-  Enabled: true
-  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
-  EnableAutoplayLoop: false
-  Volume: 0.700000
-  EnableMixToSnap: false
-  RecordVolume: 1.000000
-  EnableSpatialAudio: false
-  EnableDistanceEffect: false
-  CurveType: Logarithm
-  MinDistance: 0.000000
-  MaxDistance: 100.000000
-  EnableDirectivityEffect: false
-  EnablePositionEffect: false
-- !<ObjectPrefabAssetData/ab832dfc-39df-465d-8387-e9da5b79821e>
-  SourceRemaps:
-    - 46c08a8d-f21b-485f-a9bd-f9c9d7010e80: 1a8067f0-5744-4606-a0d7-42a23822fecf
-    - 477a4b16-2631-43a1-95ae-60de4b2515cc: 1216362a-97ff-42a7-8881-db41850b9859
-    - 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db: 8a4fcc20-78b4-4ff0-8c58-538ef6385883
-    - 913818d9-5b8c-4036-a273-e94e7abbd71e: 3224db42-8693-4ae8-b402-3a28abb833b9
-    - 9c222a6c-f824-4678-8ff9-870892167459: fd58a23a-d536-4e4b-85ec-de9271edb9d0
-    - b388d806-96cd-416b-839d-71e0f4d582ba: d7bb227e-3172-45c9-ae2a-78534abc3ea3
-    - c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d: 715b679a-a1e5-4569-84d6-a73086cbb5fa
-    - d64bd68f-9812-4018-b2ed-0b98dda156f3: 37f0b661-cf47-4ca8-ae9f-6044e400792c
-    - db6c52f0-ecdb-401d-95f2-3a56c67d9019: b4241df8-3490-4c9b-b4e0-43fbb61fe2a6
-  SourceState: !<own> 68606d94-b6f9-4f2e-a59b-24762965ba5f
-- !<ScriptComponent/b4241df8-3490-4c9b-b4e0-43fbb61fe2a6>
-  PrefabRemaps:
-    []
-  Name: EnemyBehaviour
-  Enabled: true
-  ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      forwardSpeed: !<float> 20.000000
-      turnSpeed: !<float> 1.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
-      animation: !<reference.AnimationCurveTrack> f6bbf1d8-d277-4382-ac4b-33dda2c5e261
-      maxHealth: !<float> 10.000000
-  ScriptTypes:
-    "":
-      {}
-- !<BodyComponent/d7bb227e-3172-45c9-ae2a-78534abc3ea3>
+  Components:
+    - !<own> 1c0e4b9f-9acd-41cf-99f7-c1c11ce66993
+    - !<own> 27a230b4-8e46-4948-b2f7-2213a263ed75
+    - !<own> 91d9d291-ee4c-4bc8-bcb6-7e979399e35f
+    - !<own> 9a521d68-5610-4a94-b2b8-a65bac5e5ab0
+    - !<own> f2f9b73e-b3c3-41f7-b139-dc64a137951c
+    - !<own> 511133b2-2ec0-4812-b00e-1efe9257d6ed
+    - !<own> ee927666-3604-46c7-92ca-b90b8c44ad7d
+- !<BodyComponent/91d9d291-ee4c-4bc8-bcb6-7e979399e35f>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -201,7 +133,35 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<Text/fd58a23a-d536-4e4b-85ec-de9271edb9d0>
+- !<AudioComponent/9a521d68-5610-4a94-b2b8-a65bac5e5ab0>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 6257f0d7-b276-4f95-9adc-e5955b3139c1
+  EnableAutoplayLoop: false
+  Volume: 0.700000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
+- !<ObjectPrefabAssetData/ab832dfc-39df-465d-8387-e9da5b79821e>
+  SourceRemaps:
+    - 46c08a8d-f21b-485f-a9bd-f9c9d7010e80: f2f9b73e-b3c3-41f7-b139-dc64a137951c
+    - 59ba1c8a-fa5d-4723-b8d7-1f5e2e96c0db: 9a521d68-5610-4a94-b2b8-a65bac5e5ab0
+    - 913818d9-5b8c-4036-a273-e94e7abbd71e: 8cc4b533-247a-4f01-99e9-0d774d4b2e8a
+    - 9c222a6c-f824-4678-8ff9-870892167459: ee927666-3604-46c7-92ca-b90b8c44ad7d
+    - b388d806-96cd-416b-839d-71e0f4d582ba: 91d9d291-ee4c-4bc8-bcb6-7e979399e35f
+    - c5d829c5-3f6a-448f-9d85-6adf4f2a4e8d: 1c0e4b9f-9acd-41cf-99f7-c1c11ce66993
+    - d64bd68f-9812-4018-b2ed-0b98dda156f3: 511133b2-2ec0-4812-b00e-1efe9257d6ed
+    - db6c52f0-ecdb-401d-95f2-3a56c67d9019: 27a230b4-8e46-4948-b2f7-2213a263ed75
+  SourceState: !<own> ffdf9eba-73b6-456d-9c68-c35a22f2283a
+- !<Text/ee927666-3604-46c7-92ca-b90b8c44ad7d>
   PrefabRemaps:
     []
   Name: Text
@@ -213,9 +173,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |
-    5/5
-
+  Text: " "
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -266,3 +224,26 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
+- !<AudioComponent/f2f9b73e-b3c3-41f7-b139-dc64a137951c>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 7b38d9dc-eb0d-4eee-9db8-f9ffe93baa6e
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: true
+  EnableDistanceEffect: true
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: true
+  EnablePositionEffect: true
+- !<ObjectPrefab/ffdf9eba-73b6-456d-9c68-c35a22f2283a>
+  PackagePath: ""
+  objects:
+    - !<own> 8cc4b533-247a-4f01-99e9-0d774d4b2e8a
+  LazyLoading: false
+  RetainAssets: false

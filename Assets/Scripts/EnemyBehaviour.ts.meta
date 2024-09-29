@@ -25,6 +25,8 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     animation: false
+    damage: false
+    damageRange: false
     forwardSpeed: false
     maxHealth: false
     playerObj: false
@@ -37,6 +39,8 @@
       playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       maxHealth: !<float> 0.000000
       animation: !<reference.AnimationCurveTrack> 00000000-0000-0000-0000-000000000000
+      damageRange: !<float> 0.000000
+      damage: !<float> 0.000000
   ScriptTypes:
     -
       {}
@@ -45,4 +49,6 @@
     - // @input float turnSpeed
     - // @input SceneObject playerObj
     - // @input Asset.AnimationCurveTrack animation
+    - // @input float damageRange
+    - // @input float damage
     - // @input float maxHealth
