@@ -24,6 +24,8 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
+    healthText: false
+    healthbar: false
     scoreText: false
     xpbar: false
   ScriptTypesHidden:
@@ -31,9 +33,13 @@
   DefaultScriptInputs:
     - scoreText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       xpbar: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      healthText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      healthbar: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Component.Text scoreText
     - // @input SceneObject xpbar
+    - // @input Component.Text healthText
+    - // @input SceneObject healthbar

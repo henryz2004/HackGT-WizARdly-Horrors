@@ -1,18 +1,18 @@
-- !<AssetImportMetadata/8743fe0a-6391-4ebd-9331-b8400e93e1b0>
+- !<AssetImportMetadata/0ab8dcfc-111b-40c4-aef8-51a03bd2b463>
   ImportedAssetIds:
-    TypeScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+    TypeScriptAsset: !<reference> 7fa3db7d-26a5-48c6-981d-9f2190173177
   ImporterName: TypeScriptAssetImporter
-  PrimaryAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
+  PrimaryAsset: !<reference> 7fa3db7d-26a5-48c6-981d-9f2190173177
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   AssetDataMap:
-    TypeScriptAsset: !<own> c8a94cf2-fc3b-474a-b31e-cad7b986c63b
+    TypeScriptAsset: !<own> fe48f0c8-d078-479a-8a4c-686a00ded9f7
   DependentFiles:
     []
-  ImporterSettings: !<AssetImporterSettings/e6ad9a1e-13dd-41a7-935c-83cd5ef4c0cd>
+  ImporterSettings: !<AssetImporterSettings/5614e501-f138-442b-9dc9-c87fe47902df>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<TypeScriptAssetData/c8a94cf2-fc3b-474a-b31e-cad7b986c63b>
+- !<TypeScriptAssetData/fe48f0c8-d078-479a-8a4c-686a00ded9f7>
   SvgIcon: ""
   Description: ""
   InternalVersion: 0
@@ -24,15 +24,12 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    forwardSpeed: false
-    playerObj: false
-    turnSpeed: false
+    {}
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
-    - forwardSpeed: !<float> 0.000000
-      turnSpeed: !<float> 0.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+    -
+      {}
   ScriptTypes:
     -
       {}
