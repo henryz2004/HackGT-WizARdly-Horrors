@@ -9,7 +9,7 @@ export class StartGame extends BaseScriptComponent {
 		
 	}
 
-	public StartGame() {
+	public startLevel1() {
 		print("Starting level 1")
 		this.getSceneObject().getParent().enabled = false;
 		this.levelContainer.enabled = true;

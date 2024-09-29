@@ -1581,7 +1581,7 @@
   Enabled: true
   ScriptAsset: !<reference> a54c5722-d3fb-4aa5-97ff-f7425978bc59
   ScriptInputsDefault:
-    onButtonPinchedFunctionNames: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1589,7 +1589,7 @@
       editEventCallbacks: true
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 068f0dd0-adb3-4846-bf4b-40b64d3d508c
       onButtonPinchedFunctionNames: !<string[]>
-        []
+        - startLevel1
   ScriptTypes:
     "":
       {}
@@ -2539,7 +2539,7 @@
   RotationTension: 30.000000
   ForceCompound: false
   Intangible: false
-  ShowCollider: true
+  ShowCollider: false
   Dynamic: false
   BodySetting: Density
   BodySettingValue: 1.000000
@@ -5679,7 +5679,7 @@
     - b54703db-7dae-4350-b756-c47188e4e1cb: 477a4b16-2631-43a1-95ae-60de4b2515cc
     - ee955f8c-3a45-49d1-8e5a-861505dd0f6e: b1aa9561-236b-474b-b8d0-f195c8a469fc
   Name: EnemyGhost
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform:
     position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -5709,7 +5709,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> 90d3048b-7f96-4969-8ef0-eb306461edd6
+    - !<reference> 9f6ec594-df22-4bb6-ba31-4b67a5eac955
   Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
