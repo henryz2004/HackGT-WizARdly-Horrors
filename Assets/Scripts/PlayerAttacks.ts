@@ -1,13 +1,17 @@
 import { HandInteractor } from "SpectaclesInteractionKit/Core/HandInteractor/HandInteractor";
 import { HandInputData } from "SpectaclesInteractionKit/Providers/HandInputData/HandInputData";
 import { SIK } from "SpectaclesInteractionKit/SIK"
+import { Player } from "./PlayerSingleton";
 
 @component
 export class PlayerAttacks extends BaseScriptComponent {
     private gestureModule: GestureModule = require('LensStudio:GestureModule');
 
     @input 
-    attack_cooldown: number = 1.0;
+    initial_cooldown: number = 1.0;
+    
+    @input
+    level_up_cooldown = 0.2
 
     @input
     projectile_obj: ObjectPrefab;
@@ -18,11 +22,13 @@ export class PlayerAttacks extends BaseScriptComponent {
     @input
     projectile_container: SceneObject
 
+    attack_cooldown: number = this.initial_cooldown;
     attack_timer = this.attack_cooldown;
 
     handInputData: HandInputData = SIK.HandInputData;
 
     projectile_list: SceneObject[] = [];
+    private player = Player.getInstance();
 
     onAwake() {
         this.createEvent('UpdateEvent').bind(this.onUpdate.bind(this))
@@ -98,7 +104,8 @@ export class PlayerAttacks extends BaseScriptComponent {
     }
 
     onUpdate(){
-
+        let level = Math.floor(this.player.getScore() / 10);
+        this.attack_cooldown = this.initial_cooldown - (level * this.level_up_cooldown)
 
         this.attack_timer -= getDeltaTime();
 

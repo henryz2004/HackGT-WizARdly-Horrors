@@ -71,17 +71,18 @@
   Enabled: true
   ScriptAsset: !<reference> 0f39fcda-cd46-4685-9b0b-d7d06702f0ac
   ScriptInputsDefault:
-    forwardSpeed: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 5.000000
+      forwardSpeed: !<float> 6.000000
       strafeSpeed: !<float> 70.000000
       maxHealth: !<float> 4.000000
       damageRange: !<float> 10.000000
       damage: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      experienceGained: !<float> 1.000000
   ScriptTypes:
     "":
       {}

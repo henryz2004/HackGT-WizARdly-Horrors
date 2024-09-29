@@ -2845,8 +2845,10 @@
   ScriptInputs:
     "":
       enemyPrefab: !<reference.ObjectPrefab> 17c809fc-f709-449d-95a7-09b1fbc8e134
-      spawnDelayRange: !<Vec2> {x: 0.500000, y: 1.000000}
-      spawnRadius: !<float> 400.000000
+      spawnDelay1: !<Vec2> {x: 3.000000, y: 5.000000}
+      spawnDelay2: !<Vec2> {x: 2.000000, y: 3.000000}
+      spawnDelay3: !<Vec2> {x: 0.800000, y: 2.000000}
+      spawnRadius: !<float> 600.000000
       spawnHeight: !<float> 20.000000
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
   ScriptTypes:
@@ -5317,9 +5319,11 @@
   ScriptInputs:
     "":
       enemyPrefab: !<reference.ObjectPrefab> 0f36cf5d-f0fc-496f-a403-e44ea915978c
-      spawnDelayRange: !<Vec2> {x: 1.000000, y: 5.000000}
+      spawnDelay1: !<Vec2> {x: 5.000000, y: 7.000000}
+      spawnDelay2: !<Vec2> {x: 3.000000, y: 5.000000}
+      spawnDelay3: !<Vec2> {x: 1.000000, y: 3.000000}
       spawnRadius: !<float> 500.000000
-      spawnHeight: !<float> -5.000000
+      spawnHeight: !<float> -10.000000
       camera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
   ScriptTypes:
     "":
@@ -5950,17 +5954,18 @@
   Enabled: true
   ScriptAsset: !<reference> 0f39fcda-cd46-4685-9b0b-d7d06702f0ac
   ScriptInputsDefault:
-    forwardSpeed: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 5.000000
+      forwardSpeed: !<float> 6.000000
       strafeSpeed: !<float> 70.000000
       maxHealth: !<float> 4.000000
       damageRange: !<float> 10.000000
       damage: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      experienceGained: !<float> 1.000000
   ScriptTypes:
     "":
       {}
@@ -8329,6 +8334,7 @@
       damageRange: !<float> 8.000000
       damage: !<float> 1.000000
       maxHealth: !<float> 15.000000
+      experienceGained: !<float> 2.000000
   ScriptTypes:
     "":
       {}

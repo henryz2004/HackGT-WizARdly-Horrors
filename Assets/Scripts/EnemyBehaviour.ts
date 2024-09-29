@@ -11,21 +11,24 @@ export class EnemyBehaviour extends BaseScriptComponent {
 	@input
 	playerObj: SceneObject;
 
+	@input
+	damageRange: number;
 
-    @input
-    damageRange: number;
-
-    @input
-    damage: number;
+	@input
+	damage: number;
 
 	@input maxHealth: number;
+
+	@input
+	experienceGained: number;
+
 	health: number;
 	enemy = this.getSceneObject();
 	private player = Player.getInstance();
 	sounds: AudioComponent[] =
 		this.getSceneObject().getComponents("AudioComponent");
 
-    private healthText : Text3D = this.getSceneObject().getComponent("Text3D");
+	private healthText: Text3D = this.getSceneObject().getComponent("Text3D");
 
 	frame = 0;
 
@@ -39,16 +42,19 @@ export class EnemyBehaviour extends BaseScriptComponent {
 
 	public takeDamage(damage: number): void {
 		this.health -= damage;
-        this.healthText.text = this.health%1===0?(this.health+"/"+this.maxHealth):this.health.toPrecision(1)+"/"+this.maxHealth;
+		this.healthText.text =
+			this.health % 1 === 0
+				? this.health + "/" + this.maxHealth
+				: this.health.toPrecision(1) + "/" + this.maxHealth;
 		if (this.health <= 0) {
 			this.kill();
 		} else {
-            this.sounds[1].play(0);
+			this.sounds[1].play(0);
 		}
 	}
 
 	private kill(): void {
-		this.player.addScore(1);
+		this.player.addScore(this.experienceGained);
 		if (this.getSceneObject()) {
 			this.getSceneObject().destroy();
 		}
@@ -66,18 +72,18 @@ export class EnemyBehaviour extends BaseScriptComponent {
 			// print("movement")
 		}
 
-        this.pollPlayer()
+		this.pollPlayer();
 	}
 
-    private pollPlayer(): void {
-        let playerPos: vec3 = this.playerObj.getTransform().getWorldPosition();
-        let currPos: vec3 = this.enemy.getTransform().getWorldPosition();
-        let dist = playerPos.distance(currPos);
-        if (dist < this.damageRange) {
-            this.player.takeDamage( this.damage);
-            this.kill();
-        }
-    }
+	private pollPlayer(): void {
+		let playerPos: vec3 = this.playerObj.getTransform().getWorldPosition();
+		let currPos: vec3 = this.enemy.getTransform().getWorldPosition();
+		let dist = playerPos.distance(currPos);
+		if (dist < this.damageRange) {
+			this.player.takeDamage(this.damage);
+			this.kill();
+		}
+	}
 
 	private lose(): void {
 		// jumpscare lol

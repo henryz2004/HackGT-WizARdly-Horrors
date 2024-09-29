@@ -26,23 +26,29 @@
   ScriptInputsHidden:
     camera: false
     enemyPrefab: false
-    spawnDelayRange: false
+    spawnDelay1: false
+    spawnDelay2: false
+    spawnDelay3: false
     spawnHeight: false
     spawnRadius: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - enemyPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
-      spawnDelayRange: !<Vec2> {x: 0.000000, y: 0.000000}
       spawnRadius: !<float> 50.000000
       spawnHeight: !<float> 0.000000
       camera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      spawnDelay1: !<Vec2> {x: 0.000000, y: 0.000000}
+      spawnDelay2: !<Vec2> {x: 0.000000, y: 0.000000}
+      spawnDelay3: !<Vec2> {x: 0.000000, y: 0.000000}
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input Asset.ObjectPrefab enemyPrefab
-    - // @input vec2 spawnDelayRange
+    - // @input vec2 spawnDelay1
+    - // @input vec2 spawnDelay2
+    - // @input vec2 spawnDelay3
     - // @input float spawnRadius = 50
     - // @input float spawnHeight = 0
     - // @input Component.Camera camera

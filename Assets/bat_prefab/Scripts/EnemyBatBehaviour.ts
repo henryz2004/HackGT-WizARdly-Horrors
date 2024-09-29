@@ -26,6 +26,9 @@ export class EnemyBatBehaviour extends BaseScriptComponent {
 	@input
 	playerObj: SceneObject;
 
+    @input
+    experienceGained:  number;
+
 	private player = Player.getInstance();
 
 	// Reference to the enemy's scene object
@@ -57,7 +60,7 @@ export class EnemyBatBehaviour extends BaseScriptComponent {
 	 * Method called when the enemy's health reaches zero
 	 */
 	private onDeath() {
-        this.player.addScore(1);
+        this.player.addScore(this.experienceGained);
 		// Handle enemy death (e.g., play animation, remove from scene)
 		if (this.enemy) {
 			print("Enemy has been defeated!");

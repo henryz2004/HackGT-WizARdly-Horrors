@@ -26,6 +26,7 @@
   ScriptInputsHidden:
     damage: false
     damageRange: false
+    experienceGained: false
     forwardSpeed: false
     maxHealth: false
     playerObj: false
@@ -39,6 +40,7 @@
       maxHealth: !<float> 0.000000
       damageRange: !<float> 0.000000
       damage: !<float> 0.000000
+      experienceGained: !<float> 0.000000
   ScriptTypes:
     -
       {}
@@ -49,3 +51,4 @@
     - // @input float damageRange
     - // @input float damage
     - // @input float maxHealth
+    - // @input float experienceGained

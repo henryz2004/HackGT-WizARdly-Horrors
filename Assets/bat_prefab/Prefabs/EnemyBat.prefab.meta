@@ -12,13 +12,7 @@
   ImporterSettings: !<AssetImporterSettings/76e3b617-ae6e-450a-bd10-5899d5fcf9b2>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/14909e36-640f-47c3-b519-8e8d738dfeae>
-  PackagePath: ""
-  objects:
-    - !<own> 22836739-5b26-4a49-b50c-db2a55d6b8b8
-  LazyLoading: false
-  RetainAssets: true
-- !<SceneObject/22836739-5b26-4a49-b50c-db2a55d6b8b8>
+- !<SceneObject/58e42dd6-aa04-41fd-a975-e7d5f79cd667>
   PrefabRemaps:
     []
   Name: EnemyBat
@@ -32,38 +26,36 @@
   Children:
     []
   Components:
-    - !<own> 946e2776-fa38-44de-820e-75716d313874
-    - !<own> ffae1357-d4e7-4ac4-8aad-03c227dfd153
-    - !<own> f4565b45-80bb-4da7-a149-d264b818e1c2
-- !<ScriptComponent/946e2776-fa38-44de-820e-75716d313874>
+    - !<own> 8720b0d3-85dc-4daf-95fe-b09a6c257199
+    - !<own> 6c82c153-966a-4534-902e-5293aae65234
+    - !<own> 7b71b43f-a760-4e64-8770-a8b2ce21d502
+- !<ScriptComponent/6c82c153-966a-4534-902e-5293aae65234>
   PrefabRemaps:
     []
-  Name: EnemyBatBehaviour
+  Name: Generative 3D Component 1
   Enabled: true
-  ScriptAsset: !<reference> 0f39fcda-cd46-4685-9b0b-d7d06702f0ac
+  ScriptAsset: !<reference> baa59112-8067-4c70-9309-3f59e2b6d7c4
   ScriptInputsDefault:
-    forwardSpeed: true
+    renderOrder: true
+    useShadow: true
+    shadowDensity: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 5.000000
-      strafeSpeed: !<float> 70.000000
-      maxHealth: !<float> 4.000000
-      damageRange: !<float> 10.000000
-      damage: !<float> 1.000000
-      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      renderOrder: 0
+      useShadow: true
+      shadowDensity: !<float> 1.000000
   ScriptTypes:
     "":
       {}
-- !<ObjectPrefabAssetData/a7e282a7-0d76-4bcc-a355-9d8ffa1d2f83>
-  SourceRemaps:
-    - 20912917-c846-4173-9618-bf7935a1c29d: f4565b45-80bb-4da7-a149-d264b818e1c2
-    - c4c0f673-c4e1-4006-bdbb-24ad94542558: 22836739-5b26-4a49-b50c-db2a55d6b8b8
-    - e4e3a006-eca7-44dc-b451-e15778fa78d0: ffae1357-d4e7-4ac4-8aad-03c227dfd153
-    - fd137b21-6d19-4498-8b7a-8964be2956cf: 946e2776-fa38-44de-820e-75716d313874
-  SourceState: !<own> 14909e36-640f-47c3-b519-8e8d738dfeae
-- !<BodyComponent/f4565b45-80bb-4da7-a149-d264b818e1c2>
+- !<ObjectPrefab/747ad63b-89da-4a6d-bcb7-a15716fea2a1>
+  PackagePath: ""
+  objects:
+    - !<own> 58e42dd6-aa04-41fd-a975-e7d5f79cd667
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/7b71b43f-a760-4e64-8770-a8b2ce21d502>
   PrefabRemaps:
     []
   Name: Physics Body
@@ -86,23 +78,32 @@
   BodySettingValue: 1.000000
   Damping: 0.000000
   AngularDamping: 0.000000
-- !<ScriptComponent/ffae1357-d4e7-4ac4-8aad-03c227dfd153>
+- !<ScriptComponent/8720b0d3-85dc-4daf-95fe-b09a6c257199>
   PrefabRemaps:
     []
-  Name: Generative 3D Component 1
+  Name: EnemyBatBehaviour
   Enabled: true
-  ScriptAsset: !<reference> baa59112-8067-4c70-9309-3f59e2b6d7c4
+  ScriptAsset: !<reference> 0f39fcda-cd46-4685-9b0b-d7d06702f0ac
   ScriptInputsDefault:
-    renderOrder: true
-    useShadow: true
-    shadowDensity: true
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      renderOrder: 0
-      useShadow: true
-      shadowDensity: !<float> 1.000000
+      forwardSpeed: !<float> 6.000000
+      strafeSpeed: !<float> 70.000000
+      maxHealth: !<float> 4.000000
+      damageRange: !<float> 10.000000
+      damage: !<float> 1.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+      experienceGained: !<float> 1.000000
   ScriptTypes:
     "":
       {}
+- !<ObjectPrefabAssetData/a7e282a7-0d76-4bcc-a355-9d8ffa1d2f83>
+  SourceRemaps:
+    - 20912917-c846-4173-9618-bf7935a1c29d: 7b71b43f-a760-4e64-8770-a8b2ce21d502
+    - c4c0f673-c4e1-4006-bdbb-24ad94542558: 58e42dd6-aa04-41fd-a975-e7d5f79cd667
+    - e4e3a006-eca7-44dc-b451-e15778fa78d0: 6c82c153-966a-4534-902e-5293aae65234
+    - fd137b21-6d19-4498-8b7a-8964be2956cf: 8720b0d3-85dc-4daf-95fe-b09a6c257199
+  SourceState: !<own> 747ad63b-89da-4a6d-bcb7-a15716fea2a1
