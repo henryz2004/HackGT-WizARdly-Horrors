@@ -27,7 +27,7 @@ export class EnemyBehaviour extends BaseScriptComponent {
     }
 
     onUpdate(){
-        
+      
         if(this.getSceneObject() === null){
             return
         }
@@ -60,7 +60,6 @@ export class EnemyBehaviour extends BaseScriptComponent {
         }
         this.enemy.getTransform().setWorldScale(this.enemy.getTransform().getWorldScale().mult(new vec3(1.25,1.25,1.25)))
         print(this.enemy.getTransform().getWorldScale());
-    }
 
     private move(): void{
 

@@ -31,17 +31,48 @@
   Enabled: true
   ScriptAsset: !<reference> 0af48d40-9077-48bb-b111-64af7fee9003
   ScriptInputsDefault:
-    {}
+    forwardSpeed: true
+    turnSpeed: true
+    playerObj: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      forwardSpeed: !<float> 30.000000
+<<<<<<< LOCAL
+      forwardSpeed: !<float> 0.000000
+      turnSpeed: !<float> 0.000000
+      playerObj: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+=======
+      forwardSpeed: !<float> 20.000000
       turnSpeed: !<float> 1.000000
       playerObj: !<reference.SceneObject> 00000000-0000-0065-0000-000000000064
+>>>>>>> REMOTE
   ScriptTypes:
     "":
       {}
+- !<BodyComponent/b345bb74-b45c-4d6e-9a3d-c8b904ecccad>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
 - !<SceneObject/bf4c18f1-6dcf-494d-9f7a-726fe20318c7>
   PrefabRemaps:
     []
@@ -58,3 +89,4 @@
   Components:
     - !<own> 05ebaa53-4aab-4749-b6cc-8605b0033b8d
     - !<own> 7a14bb16-da32-4bd3-b215-d8b61f26f010
+    - !<own> b345bb74-b45c-4d6e-9a3d-c8b904ecccad

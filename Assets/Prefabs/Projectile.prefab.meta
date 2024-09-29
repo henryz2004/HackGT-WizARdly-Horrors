@@ -1,0 +1,103 @@
+- !<AssetImportMetadata/0a900674-da3b-4b99-a7bb-a3a460b311f1>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 7f417bb0-0c00-488c-a019-ec5e086d47ce
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 7f417bb0-0c00-488c-a019-ec5e086d47ce
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  AssetDataMap:
+    ObjectPrefab: !<own> 43951129-edeb-40af-ba2a-1bf6aef9a818
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings/308140fe-2a4b-4725-afec-8d3acaa9372b>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptComponent/37dab768-f37c-4f7a-80e4-00a4258b639d>
+  PrefabRemaps:
+    []
+  Name: ProjectileDamage
+  Enabled: true
+  ScriptAsset: !<reference> 06e7986d-26c0-4615-b5f2-9a05f8f05560
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/43951129-edeb-40af-ba2a-1bf6aef9a818>
+  SourceRemaps:
+    - 05355764-37f5-47be-8a88-040a1d31f818: bea4a337-6110-4c0d-9332-71cf1417fc46
+    - 11316f5b-da66-4950-8c2d-3a5c5af19f2f: 67aaeec5-2348-4c56-955e-11798d902f29
+    - 1f68e5e5-c56b-49bd-a953-797b12a8263b: 37dab768-f37c-4f7a-80e4-00a4258b639d
+    - dfaf2618-3054-4cd1-ba4d-076696e901b6: d5fba621-a9f3-4eaf-9404-0feb51c087a0
+  SourceState: !<own> c54e10c2-5e80-4265-8a78-d40b78a7e761
+- !<RenderMeshVisual/67aaeec5-2348-4c56-955e-11798d902f29>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> df64425b-2200-4b61-b4b9-2af23e229c6d
+  Mesh: !<reference> 5164ce09-2e13-4fb4-9ed6-65bd3d62120a
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<BodyComponent/bea4a337-6110-4c0d-9332-71cf1417fc46>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Sphere/00000000-0000-0000-0000-000000000000>
+    FitVisual: true
+    Radius: 6.000000
+  Matter: !<reference> ddd48825-3c1d-4bdd-b2ac-f2bed06e1a79
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 70d522d8-d109-4c9f-b625-b5aa379929b7
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Mass
+  BodySettingValue: 16.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<ObjectPrefab/c54e10c2-5e80-4265-8a78-d40b78a7e761>
+  PackagePath: ""
+  objects:
+    - !<own> d5fba621-a9f3-4eaf-9404-0feb51c087a0
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/d5fba621-a9f3-4eaf-9404-0feb51c087a0>
+  PrefabRemaps:
+    []
+  Name: Projectile
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 67aaeec5-2348-4c56-955e-11798d902f29
+    - !<own> 37dab768-f37c-4f7a-80e4-00a4258b639d
+    - !<own> bea4a337-6110-4c0d-9332-71cf1417fc46
